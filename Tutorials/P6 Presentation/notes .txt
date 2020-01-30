@@ -1,0 +1,62 @@
+Slide 1:
+Schedules phase in a project plan with a distinct beginning and end. 
+Usually is made by several tasks.
+
+Slide 2:
+It is true sometimes can cost and it can be time consuming but not doing it is a false economy.
+It holds the team and client together.
+Keeping control of the: Time, Budget and Scope.
+Keep the teams focused on a specific goal.
+
+LEADERSHIP
+Brings leadership and direction to projects. Without project management, a team can be like a ship moving but without direction control or purpose. Leadership enables the team to do their best work providing vision, motivation, inspiration.
+
+CLEAR FOCUS & OBJECTIVES
+Breaking up the project into smaller tasks of work enables the team to remain focused on clear objectives and quickly identify risks.
+
+REALISTIC PROJECT PLANNING
+Without proper project management, projects can be delivered late, and over budget. A realistic project planning creates a clear process with achievable deadlines, that enables everyone from the project team to work within reasonable limits, and not unreasonable expectations.
+
+QUALITY CONTROL
+Projects are usually under a lot of pressure to be completed. Dedicated project management ensures that not only the project have the time and resources to deliver, but also that the output quality is tested at every stage.
+
+ORDERLY PROCESS
+Project management is important because it ensures that right people do the right things at the right time. Proper planning and process can make a massive difference as the team knows who is doing what, when and how. Project management matters here because without an orderly, easily understood process, companies risk project failure, corruption of employee trust and resource loss. 
+
+Slide 3:
+In order to develop a schedule, we first need to define the activities, sequence them in the right order, estimate the resources needed, and estimate the time it will take to complete the task.
+
+Slide 5:
+These are the activity definitions for the work packages. The next task is to complete the activity list. The project activity list is a list of everything that needs to be done to complete a project. Next, we need to define the activity attributes which is a description of each activity. 
+
+Slide 6:
+There are 3 kinds of predecessor activities: 
+The Finish-to-Start(FS) - It means that one task needs to be completed before another one can start.
+Start-to-Start(SS) - Activities that begin at the same time.
+Finish-to-Finish(FF) - Activities that finish at the same time.
+It is possible to have Start-to-Finish (SF) predecessors. An example might be that the musicians cannot finish playing until the guests have started leaving the ceremony.
+
+Slide 7:
+MILESTONES
+Milestones can determine the start or the end date of an activity, also all of the important checkpoints of your project are tracked as milestones.
+
+Slide 10:
+CREATING THE GANTT CHART
+A Gantt chart is a type of a bar chart that illustrates a project schedule.
+It displays the start and finish dates of terminal and summary elements of a project.
+It also show all the key stages of a project and their duration as a bar chart, with the time scale across the top. 
+In this example, key stage K starts at week 23 so its end point coincides with key stage L.
+
+Slide 11:
+CREATING THE NETWORK DIAGRAM
+The network diagram is a way to visualize the interrelationships of project activities. Network diagrams provide a graphical view of the tasks and how they relate to one another.
+Leaving even one task out of the network could change the overall schedule duration, estimated costs, and resource allocation commitments. 
+
+Slide 12:
+THE CRITICAL PATH
+The critical path describes the sequence of tasks that would enable the project to be completed in the shortest possible time. It is based on the idea that some tasks must be completed before others can begin. A critical path diagram is a useful tool for scheduling dependencies and controlling a project. In order to identify the critical path, we need to calculate the length of time that each task will take.
+
+We have given the key stage "Secure funds" an estimated time of zero weeks because the project cannot start without the availability of some funding. The stages can now be lined up to produce a network diagram that shows that there are three paths from start to finish and that the lines making up each path have a minimum duration.
+
+In this example, the critical path is A-B-C-D-E-F-I-L, and the earliest competition date for the project is the sum of the estimated times for all the stages on the critical path - 28 weeks - from the point of securing the funding. All the key stages on the critical path must be completed on time if the project is to be finished on schedule.
+If the project total time is much longer than the project sponsor's expectations, you will need to renegotiate the time scale. Mapping the critical path helps to identify the activities that need to be monitors most closely.
