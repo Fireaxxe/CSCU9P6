@@ -1,0 +1,19 @@
+one sig Moriarty, Holmes, Watson {}
+sig escaped, bungling, onthejob in univ {}
+
+fact { Moriarty in escaped 
+         implies 
+         (Holmes in bungling or Watson in onthejob)
+
+Holmes not in bungling or Moriarty in escaped
+
+Watson not in onthejob 
+}
+
+assert c {
+  Moriarty in escaped iff Holmes in bungling
+}
+check c
+
+pred show {}
+run show

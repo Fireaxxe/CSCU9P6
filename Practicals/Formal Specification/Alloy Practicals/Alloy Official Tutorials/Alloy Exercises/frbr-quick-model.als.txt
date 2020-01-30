@@ -1,0 +1,29 @@
+sig Object {}
+sig Work in Object {}
+sig Expression in Object {
+  realizes : one Work
+}
+sig Manifestation in Object {
+  embodies : some Expression
+}
+sig Item in Object {
+  exemplifies : one Manifestation
+}
+
+fact { Object = Work 
+  + Expression 
+  + Manifestation 
+  + Item }
+
+pred pairwise_disjoint {
+  no (Work & Expression) 
+  + (Work & Manifestation)
+  + (Work & Item)
+  + (Expression & Manifestation)
+  + (Expression & Item)
+  + (Manifestation & Item)
+
+}
+
+pred show {}
+run show for 7

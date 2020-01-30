@@ -1,0 +1,27 @@
+/* hello, world */
+
+/* In principio creavit Deus caelum et terram.
+    In the beginning God created heaven, and earth. */
+
+sig res {}
+sig terra, caelum extends res {}
+sig creator in res {
+  creavit : set res
+}
+sig Deus extends creator {}{
+  creavit = terra + caelum
+}
+fact unus_deus { one Deus }
+
+pred creata [ r : res ] {
+  some c : creator | r in c.creavit
+}
+run creata
+
+assert deus_creator { Deus in creator }
+assert deus_solus_creator { creator in Deus }
+check deus_creator
+check deus_solus_creator
+
+pred ecce {}
+run ecce

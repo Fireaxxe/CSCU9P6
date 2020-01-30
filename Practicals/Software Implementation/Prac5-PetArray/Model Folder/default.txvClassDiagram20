@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V1hexuhjdbrkj5rlyzsde">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<property name="__options" value="option.nlayout.recursive=true"/>
+		<reference referencedUin="jdt:e_class:src:Owner">
+			<property name="bounds" value="257,124,143,184"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Owner:myPet">
+				<property name="sourceAnchor" value="333,313"/>
+				<property name="targetAnchor" value="333,492"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Pet">
+			<property name="bounds" value="266,487,125,150"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Boundary">
+			<property name="bounds" value="5,5,160,422"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Boundary:ownList">
+				<property name="sourceAnchor" value="170,221"/>
+				<property name="targetAnchor" value="262,221"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Boundary:ownList">
+					<property name="bounds" value="230,197,22,21"/>
+				</reference>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

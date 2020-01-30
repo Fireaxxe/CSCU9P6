@@ -1,0 +1,25 @@
+sig MS {
+  exemplar : lone MS
+}
+
+pred show {}
+run show for 7
+
+fact no_cycles {
+  no m : MS | m in m.^exemplar
+}
+fact one_original {
+  one m : MS | no m.exemplar
+}
+
+sig extant in MS {}
+
+pred no_barren_lost_mss {
+  all m : MS - extant | some ^exemplar.m & extant 
+}
+run no_barren_lost_mss for 7
+
+pred reconstruct_splits_only {
+  all m : MS - extant | some disj x, y : MS | x + y in exemplar.m
+}
+run { no_barren_lost_mss and reconstruct_splits_only } for 7

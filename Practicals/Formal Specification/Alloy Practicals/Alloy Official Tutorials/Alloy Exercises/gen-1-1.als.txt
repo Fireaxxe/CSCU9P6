@@ -1,0 +1,34 @@
+/*
+in principio creavit Deus caelum et terram.
+
+In the beginning God created heaven, and earth.
+	
+terra autem erat inanis et vacua 
+et tenebrae 
+super faciem abyssi 
+et spiritus Dei ferebatur super aquas.
+
+And the earth was void and empty, 
+and darkness was upon the face of the deep; 
+and the spirit of God moved over the waters.
+*/
+
+sig res {}
+one sig terra, caelum extends res {}
+one sig Deus extends res {}
+sig tempus {}
+one sig principium in tempus {}
+
+sig actus {
+  agens : set univ,
+  patiens : set univ,
+  quando : tempus
+}
+
+one sig creatio extends actus {}{
+  agens = Deus
+  patiens = terra + caelum
+  quando = principium
+}
+pred fiat {}
+run fiat 

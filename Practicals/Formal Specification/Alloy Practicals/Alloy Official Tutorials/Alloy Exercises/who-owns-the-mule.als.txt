@@ -1,0 +1,12 @@
+abstract sig farmer {}
+
+one sig A, B, C extends farmer {}
+
+one sig OwnsMule in farmer {}
+
+pred A1 { C in OwnsMule }
+pred A2 { A not in OwnsMule }
+fact { (A1 and not A2) or (A2 and not A1) }
+
+pred show {}
+run show

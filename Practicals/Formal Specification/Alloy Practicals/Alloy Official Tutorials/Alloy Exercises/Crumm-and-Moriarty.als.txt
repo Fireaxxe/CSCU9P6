@@ -1,0 +1,12 @@
+one sig Moriarty, Crumm {}
+sig guilty in univ {}
+
+fact { Crumm not in guilty }
+
+fact { Crumm in guilty implies Moriarty in guilty }
+
+assert conclusion { Moriarty not in guilty }
+check conclusion
+
+pred show {}
+run show

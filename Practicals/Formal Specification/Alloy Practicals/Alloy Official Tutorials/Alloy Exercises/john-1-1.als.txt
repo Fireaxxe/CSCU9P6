@@ -1,0 +1,48 @@
+/*
+in principio erat Verbum 
+et Verbum erat apud Deum 
+et Deus erat Verbum.
+
+In the beginning was the Word: 
+and the Word was with God: 
+and the Word was God.
+	
+hoc erat in principio apud Deum.
+
+The same was in the beginning with God.
+
+omnia per ipsum facta sunt 
+et sine ipso factum est nihil 
+quod factum est.
+
+All things were made by him: 
+and without him 
+was made nothing 
+that was made.	
+
+*/
+sig res { 
+  apud : set res,
+  factum_per : set res 
+}
+one sig Verbum in res {}
+one sig Deus in res {}
+sig factum in res {}
+
+fact { factum = factum_per.res }
+
+fact Joh11a { some Verbum }
+fact Joh11b { apud[Verbum] = Deus }
+fact Joh11c { Deus = Verbum }
+fact Joh13a { all r : res | r.factum_per = Verbum }
+fact Joh13b { no ( factum - factum_per.Verbum) }
+pred sine_verbo [ r : res ] {
+  some r.factum_per
+  and
+  r.factum_per != Verbum
+}
+assert Joh13b_bis { no r : res | r in factum and sine_verbo[r] }
+check Joh13b_bis
+
+pred ecce {}
+run ecce

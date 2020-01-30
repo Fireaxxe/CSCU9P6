@@ -1,0 +1,19 @@
+sig Person {
+  loves : set Person,
+  hates : set Person
+}
+one sig Alma in Person {}
+
+fact { all p : Person | p in Alma.loves => Alma in p.loves }
+
+assert C {
+  (all p : Person | p in Alma.loves)
+  implies
+  (all p : Person | Alma in p.loves)
+}
+assert C2 {
+  Person in Alma.loves implies all p : Person | Alma in p.loves
+}
+
+check C
+check C2
