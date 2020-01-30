@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="id8dwck6nuccack6ny0fu">
+		<property name="$description" value="Please read the information in the Introduction to PACSUS use case (right-mouse click background of this diagram and follow hyperlink)."/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<property name="__options" value="option.formatting = Java &#10;filter.m.state = off &#10;filter.n.state = off &#10;option.showPackageContents = true &#10;option.detail = Implementation &#10;option.links = Rectilinear &#10;option.showprintgrid = true &#10;option.printzoom = 0.5 &#10;option.orientation = Landscape &#10;option.fittopage = true &#10;&#10;option.papersize = A3 &#10;option.printheader = false &#10;option.printfooter = false &#10;option.boundingbox = false &#10;option.right = 0.5 &#10;option.top = 0.5 &#10;option.left = 0.5 &#10;option.bottom = 0.5"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::ctuu3eyww5z36-mz6nsf"/>
+		<property name="$defaultDiagram" value=""/>
+		<reference referencedUin="jdt:e_class:src:Permit">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1590,319,218,301"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Permit:permittedVehicles">
+				<property name="sourceAnchor" value="1595,380"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="1405,380"/>
+				<property name="location_set_by_user" value="true"/>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Permit:permittedVehicles">
+					<property name="bounds" value="1571,420,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Permit:permittedVehicles">
+					<property name="bounds" value="1439,440,111,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Permit:permittedVehicles">
+					<property name="bounds" value="1404,420,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Permit:permittedVehicles">
+					<property name="bounds" value="1574,359,11,18"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Permit:permittedVehicles">
+					<property name="bounds" value="1449,383,102,18"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Permit:permittedVehicles">
+					<property name="bounds" value="1415,359,26,18"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Permit.vehicleUsedToday">
+				<property name="bounds" value="-1368,-149,0,0"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Permit:vehicleUsedToday">
+				<property name="sourceAnchor" value="1595,420"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="1405,420"/>
+				<property name="location_set_by_user" value="true"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Permit:vehicleUsedToday">
+					<property name="bounds" value="1459,423,82,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Permit:vehicleUsedToday">
+					<property name="bounds" value="1571,390,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Permit:vehicleUsedToday">
+					<property name="bounds" value="1574,399,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Permit:vehicleUsedToday">
+					<property name="bounds" value="1454,390,83,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Permit:vehicleUsedToday">
+					<property name="bounds" value="1404,390,28,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Permit:vehicleUsedToday">
+					<property name="bounds" value="1415,399,26,18"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Permit.warnings">
+				<property name="bounds" value="-1298,-159,0,0"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Permit.enteredToday">
+				<property name="bounds" value="-1370,-147,0,0"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Permit.suspended">
+				<property name="bounds" value="-1275,-185,0,0"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Permit.noOfEntries">
+				<property name="bounds" value="-1313,-169,0,0"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Vehicle_info">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1260,350,140,120"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Vehicle_info:lnkPermit">
+				<property name="sourceAnchor" value="1405,460"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="1595,460"/>
+				<property name="location_set_by_user" value="true"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Vehicle_info:lnkPermit">
+					<property name="bounds" value="1574,439,11,18"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Vehicle_info:lnkPermit">
+					<property name="bounds" value="1452,463,97,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Vehicle_info:lnkPermit">
+					<property name="bounds" value="1448,360,95,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Vehicle_info:lnkPermit">
+					<property name="bounds" value="1404,360,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Vehicle_info:lnkPermit">
+					<property name="bounds" value="1415,439,26,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Vehicle_info:lnkPermit">
+					<property name="bounds" value="1571,360,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:University_member_permit">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1520,699,179,121"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:University_member_permit:Permit">
+				<property name="sourceAnchor" value="1680,704"/>
+				<property name="targetAnchor" value="1680,625"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:University_member_permit:lnkDate">
+				<property name="sourceAnchor" value="1560,825"/>
+				<property name="targetAnchor" value="1560,960"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:University_member_permit:lnkDate">
+					<property name="bounds" value="1591,820,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:University_member_permit:lnkDate">
+					<property name="bounds" value="1560,860,57,18"/>
+					<property name="weight" value="0.25925925925925924"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:University_member_permit:lnkDate">
+					<property name="bounds" value="1563,827,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:University_member_permit:lnkDate">
+					<property name="bounds" value="2141,1000,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:University_member_permit:lnkDate">
+					<property name="bounds" value="1854,1000,63,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:University_member_permit:lnkDate">
+					<property name="bounds" value="1563,932,11,18"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Day_visitor_permit">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1320,700,166,119"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:e_field:src:Day_visitor_permit.hostName">
+				<property name="bounds" value="-1102,-415,0,0"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Day_visitor_permit:lnkDate">
+				<property name="sourceAnchor" value="1477,824"/>
+				<property name="targetAnchor" value="1477,960"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Day_visitor_permit:lnkDate">
+					<property name="bounds" value="1381,819,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Day_visitor_permit:lnkDate">
+					<property name="bounds" value="1480,826,11,18"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Day_visitor_permit:lnkDate">
+					<property name="bounds" value="1480,860,60,18"/>
+					<property name="weight" value="0.2647058823529412"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Day_visitor_permit:lnkDate">
+					<property name="bounds" value="1748,1030,65,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Day_visitor_permit:lnkDate">
+					<property name="bounds" value="1480,932,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Day_visitor_permit:lnkDate">
+					<property name="bounds" value="2141,1030,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:Day_visitor_permit:Permit">
+				<property name="sourceAnchor" value="1468,705"/>
+				<property name="targetAnchor" value="1595,580"/>
+				<property name="bounds_setted_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Regular_visitor_permit">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1731,701,169,119"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+				<property name="sourceAnchor" value="1751,825"/>
+				<property name="targetAnchor" value="1596,977"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+					<property name="bounds" value="1685,892,59,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+					<property name="bounds" value="2141,970,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+					<property name="bounds" value="1723,821,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+					<property name="bounds" value="1771,820,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+					<property name="bounds" value="1943,970,64,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate1">
+					<property name="bounds" value="1624,919,11,18"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:Regular_visitor_permit:Permit">
+				<property name="sourceAnchor" value="1774,706"/>
+				<property name="targetAnchor" value="1774,625"/>
+				<property name="bounds_setted_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:Regular_visitor_permit.hostName">
+				<property name="bounds" value="-1329,-412,0,0"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+				<property name="sourceAnchor" value="1820,825"/>
+				<property name="targetAnchor" value="1596,1024"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<property name="location_set_by_user" value="true"/>
+				<property name="bendpoints" value="1820,940"/>
+				<property name="smooth_bendpoints" value="1820,940"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+					<property name="bounds" value="1676,999,65,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+					<property name="bounds" value="1967,940,67,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+					<property name="bounds" value="1823,827,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+					<property name="bounds" value="2141,940,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+					<property name="bounds" value="1821,820,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Regular_visitor_permit:lnkDate">
+					<property name="bounds" value="1605,996,11,18"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Date">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1459,955,132,180"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Permanent_visitor_permit">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="1930,701,171,119"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_gnt:src:Permanent_visitor_permit:Permit">
+				<property name="sourceAnchor" value="1955,706"/>
+				<property name="targetAnchor" value="1813,574"/>
+				<property name="bounds_setted_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Vehicle_list">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="890,350,170,131"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Vehicle_list:lnkVehicle">
+				<property name="sourceAnchor" value="1065,415"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="1265,415"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Vehicle_list:lnkVehicle">
+					<property name="bounds" value="1140,418,50,18"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Vehicle_list:lnkVehicle">
+					<property name="bounds" value="1075,394,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Vehicle_list:lnkVehicle">
+					<property name="bounds" value="1135,365,58,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Vehicle_list:lnkVehicle">
+					<property name="bounds" value="1229,394,26,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Vehicle_list:lnkVehicle">
+					<property name="bounds" value="1226,365,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Vehicle_list:lnkVehicle">
+					<property name="bounds" value="1070,365,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Permit_list">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="890,530,170,118"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Permit_list:lnkPermit">
+				<property name="sourceAnchor" value="1065,560"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="1595,560"/>
+				<property name="location_set_by_user" value="true"/>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Permit_list:lnkPermit">
+					<property name="bounds" value="1560,555,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Permit_list:lnkPermit">
+					<property name="bounds" value="1305,563,50,18"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Permit_list:lnkPermit">
+					<property name="bounds" value="1075,539,11,18"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Permit_list:lnkPermit">
+					<property name="bounds" value="1559,539,26,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Permit_list:lnkPermit">
+					<property name="bounds" value="1064,555,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Permit_list:lnkPermit">
+					<property name="bounds" value="1296,555,58,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Administration_office">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="320,660,150,155"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Administration_office:lnkPermit_list">
+				<property name="sourceAnchor" value="475,722"/>
+				<property name="targetAnchor" value="894,615"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Administration_office:lnkPermit_list">
+					<property name="bounds" value="617,684,135,18"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Administration_office:lnkPermit_list">
+					<property name="bounds" value="485,693,26,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Administration_office:lnkPermit_list">
+					<property name="bounds" value="866,600,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Administration_office:lnkPermit_list">
+					<property name="bounds" value="480,735,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Administration_office:lnkPermit_list">
+					<property name="bounds" value="883,594,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Administration_office:lnkPermit_list">
+					<property name="bounds" value="680,740,140,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Administration_office:lnkSystem_status">
+				<property name="sourceAnchor" value="475,671"/>
+				<property name="targetAnchor" value="895,284"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Administration_office:lnkSystem_status">
+					<property name="bounds" value="760,400,54,18"/>
+					<property name="weight" value="0.6890700866323731"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Administration_office:lnkSystem_status">
+					<property name="bounds" value="881,266,11,18"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Administration_office:lnkSystem_status">
+					<property name="bounds" value="482,621,26,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Administration_office:lnkSystem_status">
+					<property name="bounds" value="480,670,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Administration_office:lnkSystem_status">
+					<property name="bounds" value="866,235,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Administration_office:lnkSystem_status">
+					<property name="bounds" value="680,240,57,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Administration_office:lnkVehicle_list">
+				<property name="sourceAnchor" value="475,699"/>
+				<property name="targetAnchor" value="895,462"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Administration_office:lnkVehicle_list">
+					<property name="bounds" value="484,657,26,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Administration_office:lnkVehicle_list">
+					<property name="bounds" value="480,705,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Administration_office:lnkVehicle_list">
+					<property name="bounds" value="680,440,140,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Administration_office:lnkVehicle_list">
+					<property name="bounds" value="875,446,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Administration_office:lnkVehicle_list">
+					<property name="bounds" value="866,430,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Administration_office:lnkVehicle_list">
+					<property name="bounds" value="600,620,135,18"/>
+					<property name="weight" value="0.30571227571606124"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Timer">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="320,310,150,135"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Timer:lnkPermit_list">
+				<property name="sourceAnchor" value="475,408"/>
+				<property name="targetAnchor" value="894,562"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Timer:lnkPermit_list">
+					<property name="bounds" value="484,390,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Timer:lnkPermit_list">
+					<property name="bounds" value="480,393,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Timer:lnkPermit_list">
+					<property name="bounds" value="883,538,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Timer:lnkPermit_list">
+					<property name="bounds" value="710,550,81,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Timer:lnkPermit_list">
+					<property name="bounds" value="519,403,82,18"/>
+					<property name="weight" value="0.08793126256111022"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Timer:lnkPermit_list">
+					<property name="bounds" value="866,540,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Timer:today">
+				<property name="sourceAnchor" value="475,449"/>
+				<property name="targetAnchor" value="1463,1026"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<property name="location_set_by_user" value="true"/>
+				<property name="bendpoints" value="880,820"/>
+				<property name="smooth_bendpoints" value="880,820"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Timer:today">
+					<property name="bounds" value="1146,934,50,18"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Timer:today">
+					<property name="bounds" value="496,449,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Timer:today">
+					<property name="bounds" value="301,415,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Timer:today">
+					<property name="bounds" value="1452,1002,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Timer:today">
+					<property name="bounds" value="1181,1060,58,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Timer:today">
+					<property name="bounds" value="2141,1060,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Timer:lnkSystem_status">
+				<property name="sourceAnchor" value="475,359"/>
+				<property name="targetAnchor" value="895,230"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Timer:lnkSystem_status">
+					<property name="bounds" value="874,212,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Timer:lnkSystem_status">
+					<property name="bounds" value="866,165,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Timer:lnkSystem_status">
+					<property name="bounds" value="560,328,82,18"/>
+					<property name="weight" value="0.20532752138177615"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Timer:lnkSystem_status">
+					<property name="bounds" value="485,332,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Timer:lnkSystem_status">
+					<property name="bounds" value="480,320,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Timer:lnkSystem_status">
+					<property name="bounds" value="640,170,81,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Barrier">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="320,110,150,170"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Barrier:lnkVehicle_list">
+				<property name="sourceAnchor" value="475,227"/>
+				<property name="targetAnchor" value="895,383"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:label:jdt:l_ast:src:Barrier:lnkVehicle_list">
+					<property name="bounds" value="560,240,85,18"/>
+					<property name="weight" value="0.1857513055479156"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Barrier:lnkVehicle_list">
+					<property name="bounds" value="871,353,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Barrier:lnkVehicle_list">
+					<property name="bounds" value="692,353,93,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Barrier:lnkVehicle_list">
+					<property name="bounds" value="484,209,26,18"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Barrier:lnkVehicle_list">
+					<property name="bounds" value="875,355,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Barrier:lnkVehicle_list">
+					<property name="bounds" value="474,229,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Barrier:lnkSystem_status">
+				<property name="sourceAnchor" value="475,205"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="895,205"/>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Barrier:lnkSystem_status">
+					<property name="bounds" value="485,184,26,18"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Barrier:lnkSystem_status">
+					<property name="bounds" value="874,184,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Barrier:lnkSystem_status">
+					<property name="bounds" value="871,146,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Barrier:lnkSystem_status">
+					<property name="bounds" value="616,208,138,18"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Barrier:lnkSystem_status">
+					<property name="bounds" value="474,146,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Barrier:lnkSystem_status">
+					<property name="bounds" value="604,146,141,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Campus_security">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="320,480,150,166"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:Campus_security:lnkSystem_status">
+				<property name="sourceAnchor" value="475,520"/>
+				<property name="targetAnchor" value="895,259"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Campus_security:lnkSystem_status">
+					<property name="bounds" value="875,243,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Campus_security:lnkSystem_status">
+					<property name="bounds" value="866,200,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Campus_security:lnkSystem_status">
+					<property name="bounds" value="620,360,90,18"/>
+					<property name="weight" value="0.4201368115490795"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Campus_security:lnkSystem_status">
+					<property name="bounds" value="480,490,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Campus_security:lnkSystem_status">
+					<property name="bounds" value="670,210,93,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Campus_security:lnkSystem_status">
+					<property name="bounds" value="483,477,26,18"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:Campus_security:lnkVehicle_list">
+				<property name="sourceAnchor" value="475,548"/>
+				<property name="targetAnchor" value="895,436"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:Campus_security:lnkVehicle_list">
+					<property name="bounds" value="480,525,26,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:Campus_security:lnkVehicle_list">
+					<property name="bounds" value="874,418,11,18"/>
+				</reference>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:Campus_security:lnkVehicle_list">
+					<property name="bounds" value="866,395,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:Campus_security:lnkVehicle_list">
+					<property name="bounds" value="680,400,95,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:Campus_security:lnkVehicle_list">
+					<property name="bounds" value="485,519,26,18"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:Campus_security:lnkVehicle_list">
+					<property name="bounds" value="740,440,89,18"/>
+					<property name="weight" value="0.6539558579431195"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:System_status">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="890,120,174,160"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:System_status:today">
+				<property name="sourceAnchor" value="1051,285"/>
+				<property name="targetAnchor" value="1464,1000"/>
+				<property name="bounds_setted_by_user" value="true"/>
+				<property name="location_set_by_user" value="true"/>
+				<property name="bendpoints" value="1100,340,1220,820"/>
+				<property name="smooth_bendpoints" value="1100,340,1220,820"/>
+				<reference referencedUin="linklabel:supplierCardinality:jdt:l_ast:src:System_status:today">
+					<property name="bounds" value="2207,900,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:label:jdt:l_ast:src:System_status:today">
+					<property name="bounds" value="1120,660,50,18"/>
+					<property name="weight" value="0.4459628173111818"/>
+					<property name="location_set_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:label:jdt:l_ast:src:System_status:today">
+					<property name="bounds" value="1616,228,58,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="linklabel:clientCardinality:jdt:l_ast:src:System_status:today">
+					<property name="bounds" value="1068,228,15,16"/>
+					<property name="bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:clientCardinality:jdt:l_ast:src:System_status:today">
+					<property name="bounds" value="1072,285,11,18"/>
+				</reference>
+				<reference referencedUin="label:supplierCardinality:jdt:l_ast:src:System_status:today">
+					<property name="bounds" value="1445,965,11,18"/>
+				</reference>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:System_status.log">
+				<property name="bounds" value="-120,110,107,15"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:System_status.systemActive">
+				<property name="bounds" value="-1101,-118,0,0"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:Main">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="80,187,153,93"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::4lxddeywss3gj-b63522">
+			<property name="bounds" value="5,5,151,154"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::ctuu3eyww5z36-mz6nsf">
+			<property name="bounds" value="832,424,293,175"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::i4dghgkty76ocxiuait">
+			<property name="bounds" value="543,452,294,202"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::5mgzcgkty8w6e-xnp1xg">
+			<property name="bounds" value="5,9,294,222"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::gyozhgkty8w6ujdkjwo">
+			<property name="bounds" value="508,0,294,222"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::h0du1gkty8w6u-olgy9f">
+			<property name="bounds" value="31,239,302,204"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::d8yvlgktya8js5ls11m">
+			<property name="bounds" value="31,433,295,304"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::fx37lgktya8k8hlywa1">
+			<property name="bounds" value="832,212,304,192"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::g9p0dgktya8k8-wm9fo9">
+			<property name="bounds" value="866,618,304,208"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::8drjygktya8kn-a0pla1">
+			<property name="bounds" value="832,0,322,176"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$hidden" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::99gtlgkua0qb5-jq44cg">
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,102,102"/>
+			<property name="bounds" value="9,8,285,102"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

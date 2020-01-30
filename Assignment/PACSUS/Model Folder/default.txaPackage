@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<node uin="c9j8jgkuaa1g9-no47e9">
+		<property name="$description" value="The third time that a user breaches the Parking Regulations, the permit for that user (in effect all their registered vehicles) is suspended for the remainder of the academic year. This occurs automatically."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Third warning: suspend permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<link uin="7z4segkuaa1g9-lpe6ki">
+			<property name="$metaclass" value="Generalization Link"/>
+			<participant referencedUin="design:node:::c9j8jgkuaa1g9-no47e9" role="Client"></participant>
+			<participant referencedUin="design:node:::i0a2zgkuaa1fpovrfhf" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="8ocvggkuaa1fzln8v3f">
+		<property name="$description" value="A member of the administration is able to obtain status details for a given user: details of permit, whether warnings are recorded, whether suspended, and how many entries to campus have occurred since the permit was issued."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Status enquiry"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+	</node>
+	<node uin="b1afugkuaa1fz-3kb381">
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Start of year updates"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Date"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::h0du1gkty8w6u-olgy9f"/>
+		<property name="$description" value="At the start of each year, as well as the start of day updates, annual permit maintenance occurs:&#10;&#10;The number of warnings issued is cleared.&#10;&#10;Suspended permits are un-suspended.&#10;&#10;The number of recorded entries is cleared."/>
+	</node>
+	<node uin="ih92sgkuaa1fz-ajbb47">
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Start of day updates"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Date"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::h0du1gkty8w6u-olgy9f"/>
+		<property name="$description" value="At the start of each day:&#10;&#10;The date of the new day is recorded centrally in PACSUS, and any system components needing to update their display of the date are notified.&#10;&#10;Each Day or Regular visitor permit that expired at the end of the previous day is automatically cancelled from PACSUS.&#10;&#10;Each remaining permit is reset to allow any of the vehicles associated with it to enter the campus."/>
+	</node>
+	<node uin="i0a2zgkuaa1fpovrfhf">
+		<property name="$description" value="If a vehicle breaches the Parking Regulations then a Warning sticker is placed on the vehicle, and the warning is recorded in PACSUS against the permit associated with the vehicle."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Record warning"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+	</node>
+	<node uin="dzawzgkuaa1fpyjau5v">
+		<property name="$description" value="If a vehicle breaches the Parking Regulations then a Warning sticker is placed on the vehicle, and the warning is recorded in PACSUS against the permit associated with the vehicle."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Record warning"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+	</node>
+	<node uin="5itvagkuaa1fp-r8hcry">
+		<property name="$description" value="A suspended permit is to be &quot;un-suspended&quot;, because only one or two outstanding warnings remain on record. This happens automatically."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Re-activate suspended permit"/>
+		<property name="$explanation" value="(If only one or two warnings remain)"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<link uin="anlwagkuaa1fpuxmiv0">
+			<property name="$metaclass" value="Generalization Link"/>
+			<participant referencedUin="design:node:::5itvagkuaa1fp-r8hcry" role="Client"></participant>
+			<participant referencedUin="design:node:::bkkofgkuaa1f5sziik4" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="c49kigkuaa1fp1tpzkk">
+		<property name="$description" value="The barrier system is active, the camera sensor and registration number recognition system have checked the registration number with the permitted vehicles list, but entry has not been allowed. The barrier is not raised."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$explanation" value="No permit, or permit not valid today&#10;or permit suspended"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::fx37lgktya8k8hlywa1"/>
+		<property name="$name" value="Prevented from passing: not allowed"/>
+	</node>
+	<node uin="cpf2mgkuaa1ff-mfhlzm">
+		<property name="$description" value="The barrier was previously raised to allow a permitted car through. Unless the barrier system has been centrally deactivated, the barrier is lowered as soon as possible."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Permitted car has cleared the barrier"/>
+		<property name="$explanation" value="Barrier is lowered."/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Barrier"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Barrier:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Barrier:JFrame"/>
+	</node>
+	<node uin="big4zgkuaa1ffhm2nq2">
+		<property name="$description" value="The third time that a user breaches the Parking Regulations, the permit for that user (in effect all their registered vehicles) is suspended for the remainder of the academic year. This occurs automatically."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="On third warning: suspend permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<link uin="89dqogkuaa1ff-1r5cj7">
+			<property name="$metaclass" value="Generalization Link"/>
+			<participant referencedUin="design:node:::big4zgkuaa1ffhm2nq2" role="Client"></participant>
+			<participant referencedUin="design:node:::dzawzgkuaa1fpyjau5v" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="1fgjegkuaa1ff-qfaks5">
+		<property name="$description" value="Security staff will continuously monitor the state of the barrier system (activated/deactivated), and will see a log of each entry attempt through the barriers while the system is activated."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Monitor barrier system"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Campus_security"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Campus_security:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Campus_security:JFrame"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+	</node>
+	<node uin="3o0h4gkuaa1ff-a8una8">
+		<property name="$description" value="This use case occurs when a vehicle is added to or removed from a permit, or when a visit date or an end date must be modified on a Day or Regular visit permit."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Modify permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+	</node>
+	<node uin="8v22cgkuaa1f5-bdz00t">
+		<property name="$description" value="A valid application form from a University member has been processed, the permit request has been allowed, and the details of the new user are entered into PACSUS. The information required is the name of the University member being granted the permit (the permit holder), the date of issue, and the registration numbers of all vehicles to be used by that person. Note: University members having more than one vehicle is intended to allow car sharing pools, with one nominated person holding the permit; only one of the vehicles will be allowed onto campus on any one day, but only one permit fee will have to be paid."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Issue new permit: University member"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:University_member_permit"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:University_member_permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:University_member_permit:Permit"/>
+	</node>
+	<node uin="jgri5gkuaa1f5-48hzfp">
+		<property name="$description" value="A &quot;regular visitor&quot; permit is recorded in PACSUS. This requires the name of the University member receiving the visitor, the name of the visitor (the permit holder), the visitor's vehicle registration numbers and the start and end dates on which the visits will occur. This category of visitor would be appropriate for, say, a researcher collaborating with someone in the University for a couple of weeks, or for actors appearing in a short-running production at the MacRobert Theatre."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Issue new permit: regular visitor"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Regular_visitor_permit"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Regular_visitor_permit"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::gyozhgkty8w6ujdkjwo"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Regular_visitor_permit:Permit"/>
+	</node>
+	<node uin="diykfgkuaa1f5ob1r92">
+		<property name="$description" value="A &quot;permanent visitor&quot; permit is recorded in PACSUS - intended for vehicles such as taxis, buses, ambulances, milk floats and so on. This requires the name of the permit holder (probably an organization name, such as &quot;Graham's Dairies&quot;), and the visitor's vehicle registration numbers. Visitors in this category are not expected to actually park on the campus in the ordinary sense, and are issued with a distinctive paper badge for their windscreen."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Issue new permit: permanent visitor"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permanent_visitor_permit"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Permanent_visitor_permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Permanent_visitor_permit:Permit"/>
+	</node>
+	<node uin="1zkptgkuaa1f5m84x7g">
+		<property name="$description" value="A day visitor permit is recorded in advance in PACSUS. This requires the name of the University member receiving the visitor, the name of the visitor (the permit holder), the visitor's vehicle registration numbers (only one will actually be allowed in on the day in question) and the day on which the visit will occur."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Issue new permit: day visitor"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Day_visitor_permit"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Day_visitor_permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Day_visitor_permit:Permit"/>
+	</node>
+	<node uin="bkkofgkuaa1f5sziik4">
+		<property name="$description" value="One or more warnings recorded against a permit are to be deleted from the record - perhaps they were in error, or the breaches of the Regulations have been waived for some reason."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Delete warning"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+	</node>
+	<node uin="tgqlgkuaa1ev-8yw95x">
+		<property name="$description" value="The campus security staff are responsible for deciding at what times the barriers across the entrances should be raised, giving unrestricted access to the campus. This normally occurs at the end of each working day during semester time - though it is emphasized that PACSUS itself is not responsible for the timing. Exceptionally, security staff may deactivate the barrier system at any time they deem appropriate: for example if queueing traffic builds up on the roads outside the campus, or if an emergency occurs and fire engines, ambulances, etc need rapid access."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Deactivate barrier system"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Campus_security"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Campus_security:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Campus_security:JFrame"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+	</node>
+	<node uin="8i4megkuaa1ev-ei2buz">
+		<property name="$description" value="This use case occurs when any permit is no longer required (for example a user leaves the University, or a planned Day visitor has cancelled their visit). The permit is deactivated and all information is removed from PACSUS."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Cancel permit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+	</node>
+	<node uin="eefifgkuaa1ev-huf9ga">
+		<property name="$description" value="The barrier system is inactive, with all the barriers currently in raised position. In this situation PACSUS has no interaction with the vehicle."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Allowed to pass: system inactive"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+	</node>
+	<node uin="bck0ygkuaa1el-kannws">
+		<property name="$description" value="The barrier system is active, the camera sensor and registration number recognition system have checked the registration number with the permitted vehicles list, and entry is allowed and has been recorded. The barrier is raised - and stays so until the vehicle clears the barrier."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Allowed to pass: permit OK"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::fx37lgktya8k8hlywa1"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::5mgzcgkty8w6e-xnp1xg"/>
+	</node>
+	<node uin="iwbcjgkuaa1el-rsvca7">
+		<property name="$description" value="The campus security staff are responsible for deciding at what times the barriers across the entrances should be lowered, and the access subsequently limited to permit holders only. This normally occurs at the start of each working day during semester time, except for the start of each academic year up to the end of September - though it is emphasized that PACSUS itself is not responsible for the timing."/>
+		<property name="$metaclass" value="Use Case"/>
+		<property name="$name" value="Activate barrier system"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Campus_security"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::i4dghgkty76ocxiuait"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Campus_security:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Campus_security:JFrame"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+	</node>
+	<node uin="hb9ongkua8d7b-6jddv3">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="vehicleList"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Vehicle_list"/>
+		<link uin="8mahhgkua8d7bou9372">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Vehicle_list" role="Supplier"></participant>
+		</link>
+		<node uin="6hmw1gkua8d7b-ohqib0">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation3"/>
+			<property name="messageUid" value="design:link:::9onfgkua8d3p69mbte:1lh49gkua8d3pjgcawx"/>
+			<link uin="impfygkua8d7b-ywniiz">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::6hmw1gkua8d7b-ohqib0:hb9ongkua8d7b-6jddv3" role="Client"></participant>
+				<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="gv49gkua8d7b1sd3s7">
+			<property name="$description" value="Get reference to the relevant permit from the found vehicle info.&#10;&#10;Result returned: Permit reference (actually one of its concrete subclasses)."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Fetch permit"/>
+			<property name="predecessorUid" value="design:link:::9onfgkua8d3p69mbte:1lh49gkua8d3pjgcawx"/>
+			<property name="activationUid" value="design:node:::bstsygkua8d6rijo2cd:250mfgkua8d6r8m8a9t"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<property name="condition" value="If found"/>
+			<property name="normalizedIndex" value="0.4"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::250mfgkua8d6r8m8a9t" role="Supplier"></participant>
+		</link>
+		<link uin="27w8tgkua8d7b-ia81am">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::250mfgkua8d6r8m8a9t" role="Supplier"></participant>
+		</link>
+		<link uin="2ay5sgkua8d7b-ts6xt1">
+			<property name="$description" value="Search the collection of Vehicle_infos for the given registration number."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Find vehicle info"/>
+			<property name="predecessorUid" value="design:link:::9onfgkua8d3p69mbte:1lh49gkua8d3pjgcawx"/>
+			<property name="activationUid" value="design:node:::9cbdsgkua8d7b-x9nlxe:hb9ongkua8d7b-6jddv3"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<property name="normalizedIndex" value="0.2"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+		</link>
+		<node uin="9cbdsgkua8d7b-x9nlxe">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation5"/>
+			<property name="messageUid" value="design:link:::2ay5sgkua8d7b-ts6xt1:hb9ongkua8d7b-6jddv3"/>
+		</node>
+		<link uin="a8d52gkua8d7b-gb0f6b">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+		</link>
+		<link uin="9hatbgkua8d7bd9vxnr">
+			<property name="$description" value="If the vehicle was found, ask the permit if it allows this vehicle entry today - the permit must check a variety of internal details.&#10;&#10;Result returned: true if allowed, false if not."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Allowed through?"/>
+			<property name="predecessorUid" value="design:link:::9onfgkua8d3p69mbte:1lh49gkua8d3pjgcawx"/>
+			<property name="activationUid" value="design:node:::3wfacgkua8d6h-dpvws1:bc3irgkua8d6hhk5qij"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<property name="normalizedIndex" value="0.6"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Supplier"></participant>
+		</link>
+		<link uin="js3oigkua8d7bj92rqc">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Supplier"></participant>
+		</link>
+		<link uin="88685gkua8d7b3tm3ez">
+			<property name="$description" value="The vehicle is known and is allowed through the barrier, so update the entry details in the permit as necessary: entry count, and today's vehicle.&#10;&#10;Result: void"/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Update entry details"/>
+			<property name="predecessorUid" value="design:link:::9onfgkua8d3p69mbte:1lh49gkua8d3pjgcawx"/>
+			<property name="activationUid" value="design:node:::2e8u5gkua8d6h-xposmo:bc3irgkua8d6hhk5qij"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<property name="condition" value="If allowed"/>
+			<property name="normalizedIndex" value="0.8"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Supplier"></participant>
+		</link>
+		<link uin="7r8y1gkua8d7b-qml3wa">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Client"></participant>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="eizwpgkua8d716ey0zc">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="vehicleList"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Vehicle_list"/>
+		<link uin="2vm5tgkua8d71-yoic2r">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Vehicle_list" role="Supplier"></participant>
+		</link>
+		<node uin="8pb4ogkua8d71-d758ju">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation3"/>
+			<property name="messageUid" value="design:link:::1neoxgkua8d3pp6lrne:dbdq3gkua8d3p-nqwlsp"/>
+			<link uin="h0a3igkua8d71-v7id66">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::8pb4ogkua8d71-d758ju:eizwpgkua8d716ey0zc" role="Client"></participant>
+				<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Supplier"></participant>
+			</link>
+		</node>
+		<node uin="cpbvqgkua8d71-p5f4db">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation6"/>
+			<property name="messageUid" value="design:link:::d3j6bgkua8d3pc3355n:dbdq3gkua8d3p-nqwlsp"/>
+			<link uin="aoi8vgkua8d71lohhnw">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::cpbvqgkua8d71-p5f4db:eizwpgkua8d716ey0zc" role="Client"></participant>
+				<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="dyyungkua8d71-4g3wzs">
+			<property name="$description" value="Note: constructor will need permit reference as well as registration number."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="creation" value="true"/>
+			<property name="$name" value="Create"/>
+			<property name="predecessorUid" value="design:link:::d3j6bgkua8d3pc3355n:dbdq3gkua8d3p-nqwlsp"/>
+			<property name="activationUid" value="design:node:::faw0vgkua8d49-fseta9:64z2zgkua8d49v4ezyy"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<property name="normalizedIndex" value="0.33333334"/>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Client"></participant>
+			<participant referencedUin="design:node:::64z2zgkua8d49v4ezyy" role="Supplier"></participant>
+		</link>
+		<link uin="1dr6kgkua8d71uny443">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Client"></participant>
+			<participant referencedUin="design:node:::64z2zgkua8d49v4ezyy" role="Supplier"></participant>
+		</link>
+		<link uin="ewxxtgkua8d71k9p2m5">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Client"></participant>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Supplier"></participant>
+		</link>
+		<link uin="qxbegkua8d71-njnjyg">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="predecessorUid" value="design:link:::d3j6bgkua8d3pc3355n:dbdq3gkua8d3p-nqwlsp"/>
+			<property name="activationUid" value="design:node:::fh5kfgkua8d49-66eoh7:59jnfgkua8d49csp0s2"/>
+			<property name="$name" value="Add new vehicle to permit"/>
+			<property name="normalizedIndex" value="0.6666667"/>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Client"></participant>
+			<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Supplier"></participant>
+		</link>
+		<link uin="4mx6rgkua8d71-5a7pvg">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Client"></participant>
+			<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="48vtugkua8d71-dho3g6">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="Vehicle attempting entry"/>
+		<property name="@stereotype" value="actor"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::fx37lgktya8k8hlywa1"/>
+		<link uin="g8kgsgkua8d71avc3x2">
+			<property name="$description" value="In this emulation, the registration number can be entered into a text field and a button can be clicked.&#10;&#10;The &quot;result&quot; is that the barrier is &quot;raised&quot; or maybe not."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Registration number recognised"/>
+			<property name="minProcessingDuration" value="326"/>
+			<property name="normalizedIndex" value="0.5"/>
+			<property name="activationUid" value="design:node:::co6v8gkua8d3p7svtms:1lh49gkua8d3pjgcawx"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<participant referencedUin="design:node:::48vtugkua8d71-dho3g6" role="Client"></participant>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Supplier"></participant>
+		</link>
+		<link uin="god5gkua8d71i0u5cm">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::48vtugkua8d71-dho3g6" role="Client"></participant>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="d8bssgkua8d6r-4p3k30">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="timer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Timer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Timer:JFrame"/>
+		<link uin="9zyl8gkua8d6rblz55j">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Timer" role="Supplier"></participant>
+		</link>
+		<node uin="1gwfrgkua8d6r4si0wt">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation1"/>
+			<property name="messageUid" value="design:link:::e3zfigkua8d3z1pq1kh:83e6lgkua8d3z-8jyj51"/>
+			<link uin="5bp2ygkua8d6r-5cvope">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::1gwfrgkua8d6r4si0wt:d8bssgkua8d6r-4p3k30" role="Client"></participant>
+				<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="gs713gkua8d6rqzyf9c">
+			<property name="$description" value="Increment the Date attribute in timer."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Increment date"/>
+			<property name="predecessorUid" value="design:link:::e3zfigkua8d3z1pq1kh:83e6lgkua8d3z-8jyj51"/>
+			<property name="activationUid" value="design:node:::drrmhgkua8d6r-nk0bm4:d8bssgkua8d6r-4p3k30"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<property name="normalizedIndex" value="0.25"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+		</link>
+		<node uin="drrmhgkua8d6r-nk0bm4">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation2"/>
+			<property name="messageUid" value="design:link:::gs713gkua8d6rqzyf9c:d8bssgkua8d6r-4p3k30"/>
+		</node>
+		<link uin="ftk8bgkua8d6r-c01ui8">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+		</link>
+		<link uin="6kuihgkua8d6r4hugc">
+			<property name="$description" value="Inform the system status of the new date. The systemStatus notes the new date and notifies all observers of the change (in case they need to up date themselves)."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Inform new date"/>
+			<property name="predecessorUid" value="design:link:::e3zfigkua8d3z1pq1kh:83e6lgkua8d3z-8jyj51"/>
+			<property name="activationUid" value="design:node:::5asbugkua8d5xxwzxcq:5jxs2gkua8d5xejfx0s"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<property name="normalizedIndex" value="0.75"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Supplier"></participant>
+		</link>
+		<link uin="jrgcugkua8d6rzb6cb7">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Supplier"></participant>
+		</link>
+		<link uin="5erqmgkua8d6rwj8l6">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Inform new date"/>
+			<property name="predecessorUid" value="design:link:::e3zfigkua8d3z1pq1kh:83e6lgkua8d3z-8jyj51"/>
+			<property name="activationUid" value="design:node:::iz9vgkua8d4ji08b13:do5vzgkua8d4jdr1bhg"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<property name="$description" value="The new date is sent to the permit list so that daily and annual maintenance can be carried out:&#10;&#10;Permits that expired the previous day can be cancelled.&#10;&#10;In each permit, the &quot;vehicle that entered today&quot; and associated flag can be cleared.&#10;&#10;If it is also a new year, then the number of entries information in the permit is cleared."/>
+			<property name="normalizedIndex" value="0.5"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Supplier"></participant>
+		</link>
+		<link uin="dg9jqgkua8d6r-bbh3yg">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Supplier"></participant>
+		</link>
+		<link uin="jux1mgkua8d6rs8okqg">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Client"></participant>
+			<participant referencedUin="design:node:::83e6lgkua8d3z-8jyj51" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="250mfgkua8d6r8m8a9t">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="theVehicle"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Vehicle_info"/>
+		<link uin="gyv6xgkua8d6relnxaq">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::250mfgkua8d6r8m8a9t" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Vehicle_info" role="Supplier"></participant>
+		</link>
+		<node uin="bstsygkua8d6rijo2cd">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation4"/>
+			<property name="messageUid" value="design:link:::gv49gkua8d7b1sd3s7:hb9ongkua8d7b-6jddv3"/>
+			<link uin="jjur0gkua8d6r-hdst57">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::bstsygkua8d6rijo2cd:250mfgkua8d6r8m8a9t" role="Client"></participant>
+				<participant referencedUin="design:node:::250mfgkua8d6r8m8a9t" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="d60v2gkua8d6r-g9h2e3">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::250mfgkua8d6r8m8a9t" role="Client"></participant>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="bc3irgkua8d6hhk5qij">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="thePermit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<link uin="4i1tgkua8d6h-1zz8ua">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Permit" role="Supplier"></participant>
+		</link>
+		<node uin="3wfacgkua8d6h-dpvws1">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation6"/>
+			<property name="messageUid" value="design:link:::9hatbgkua8d7bd9vxnr:hb9ongkua8d7b-6jddv3"/>
+			<link uin="ctmtwgkua8d6h-nifdu3">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::3wfacgkua8d6h-dpvws1:bc3irgkua8d6hhk5qij" role="Client"></participant>
+				<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Supplier"></participant>
+			</link>
+		</node>
+		<node uin="2e8u5gkua8d6h-xposmo">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation7"/>
+			<property name="messageUid" value="design:link:::88685gkua8d7b3tm3ez:hb9ongkua8d7b-6jddv3"/>
+			<link uin="a45sqgkua8d6hbicsu1">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::2e8u5gkua8d6h-xposmo:bc3irgkua8d6hhk5qij" role="Client"></participant>
+				<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="4lti7gkua8d6hqz04mn">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::bc3irgkua8d6hhk5qij" role="Client"></participant>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="dzsadgkua8d67-uwwq6f">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="systemStatus"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+		<property name="@stereotype" value="Observable"/>
+		<link uin="3k3yngkua8d67-bqhh80">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:System_status" role="Supplier"></participant>
+		</link>
+		<node uin="h4dgzgkua8d67ppq1z">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation2"/>
+			<property name="messageUid" value="design:link:::7dvxsgkua8d3z-kc5ezf:bxlnrgkua8d3z-pov7sa"/>
+			<link uin="62gsvgkua8d6hqhfiax">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::h4dgzgkua8d67ppq1z:dzsadgkua8d67-uwwq6f" role="Client"></participant>
+				<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="8rz74gkua8d6hgnmc54">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="setChanged"/>
+			<property name="normalizedIndex" value="0.3333333333333333"/>
+			<property name="predecessorUid" value="design:link:::7dvxsgkua8d3z-kc5ezf:bxlnrgkua8d3z-pov7sa"/>
+			<property name="activationUid" value="design:node:::49uwzgkua8d6hrql5kh:dzsadgkua8d67-uwwq6f"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4bwysckk5borjckk61fn8"/>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Client"></participant>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Supplier"></participant>
+		</link>
+		<node uin="49uwzgkua8d6hrql5kh">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation3"/>
+			<property name="messageUid" value="design:link:::8rz74gkua8d6hgnmc54:dzsadgkua8d67-uwwq6f"/>
+		</node>
+		<link uin="bruddgkua8d6h-fyzxp2">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Client"></participant>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Supplier"></participant>
+		</link>
+		<link uin="jiv29gkua8d6hglur00">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="notifyObservers"/>
+			<property name="normalizedIndex" value="0.6666666666666666"/>
+			<property name="predecessorUid" value="design:link:::7dvxsgkua8d3z-kc5ezf:bxlnrgkua8d3z-pov7sa"/>
+			<property name="activationUid" value="design:node:::9uf50gkua8d6h6i0fu9:dzsadgkua8d67-uwwq6f"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4bwysckk5borjckk61fn8"/>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Client"></participant>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Supplier"></participant>
+		</link>
+		<node uin="9uf50gkua8d6h6i0fu9">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation4"/>
+			<property name="messageUid" value="design:link:::jiv29gkua8d6hglur00:dzsadgkua8d67-uwwq6f"/>
+		</node>
+		<link uin="bznnagkua8d6hxvuss5">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Client"></participant>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="gm3o2gkua8d67-iuc3cc">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="systemStatus"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+		<link uin="5t1emgkua8d67-k0v3fh">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::gm3o2gkua8d67-iuc3cc" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:System_status" role="Supplier"></participant>
+		</link>
+		<node uin="2ejzugkua8d67leookw">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation2"/>
+			<property name="messageUid" value="design:link:::j0z74gkua8d3pgdn8i9:1lh49gkua8d3pjgcawx"/>
+			<link uin="ez9eegkua8d67-a3qkli">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::2ejzugkua8d67leookw:gm3o2gkua8d67-iuc3cc" role="Client"></participant>
+				<participant referencedUin="design:node:::gm3o2gkua8d67-iuc3cc" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="4b6ubgkua8d67-2y6cgh">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::gm3o2gkua8d67-iuc3cc" role="Client"></participant>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="5jxs2gkua8d5xejfx0s">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="systemStatus"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:System_status"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:System_status:Observable"/>
+		<property name="@stereotype" value="Observable"/>
+		<link uin="8tb15gkua8d5x850u9v">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:System_status" role="Supplier"></participant>
+		</link>
+		<node uin="5asbugkua8d5xxwzxcq">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation3"/>
+			<property name="messageUid" value="design:link:::6kuihgkua8d6r4hugc:d8bssgkua8d6r-4p3k30"/>
+			<link uin="bjyytgkua8d5x-uyf4q6">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::5asbugkua8d5xxwzxcq:5jxs2gkua8d5xejfx0s" role="Client"></participant>
+				<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="42n2gkua8d5xhrm4cx">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="setChanged"/>
+			<property name="normalizedIndex" value="0.3333333333333333"/>
+			<property name="predecessorUid" value="design:link:::6kuihgkua8d6r4hugc:d8bssgkua8d6r-4p3k30"/>
+			<property name="activationUid" value="design:node:::3u4r4gkua8d5x-celhth:5jxs2gkua8d5xejfx0s"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Client"></participant>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Supplier"></participant>
+		</link>
+		<node uin="3u4r4gkua8d5x-celhth">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation4"/>
+			<property name="messageUid" value="design:link:::42n2gkua8d5xhrm4cx:5jxs2gkua8d5xejfx0s"/>
+		</node>
+		<link uin="1anvdgkua8d5xdm5le7">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Client"></participant>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Supplier"></participant>
+		</link>
+		<link uin="9rozlgkua8d5x-oensen">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="notifyObervers"/>
+			<property name="normalizedIndex" value="0.6666666666666666"/>
+			<property name="predecessorUid" value="design:link:::6kuihgkua8d6r4hugc:d8bssgkua8d6r-4p3k30"/>
+			<property name="activationUid" value="design:node:::hor9kgkua8d5x-8zf542:5jxs2gkua8d5xejfx0s"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Client"></participant>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Supplier"></participant>
+		</link>
+		<node uin="hor9kgkua8d5x-8zf542">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation5"/>
+			<property name="messageUid" value="design:link:::9rozlgkua8d5x-oensen:5jxs2gkua8d5xejfx0s"/>
+		</node>
+		<link uin="cwyjkgkua8d5xs3d854">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::5jxs2gkua8d5xejfx0s" role="Client"></participant>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="hbakqgkua8d5n-kxhycj">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="Security staff"/>
+		<property name="@stereotype" value="actor"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::g9p0dgktya8k8-wm9fo9"/>
+		<link uin="766igkua8d5x-3lbeph">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="minProcessingDuration" value="149"/>
+			<property name="normalizedIndex" value="0.5"/>
+			<property name="activationUid" value="design:node:::i2rczgkua8d3z-p7uu39:bxlnrgkua8d3z-pov7sa"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4bwysckk5borjckk61fn8"/>
+			<property name="$name" value="Activate button pressed"/>
+			<participant referencedUin="design:node:::hbakqgkua8d5n-kxhycj" role="Client"></participant>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Supplier"></participant>
+		</link>
+		<link uin="by6togkua8d5xcmfjdj">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::hbakqgkua8d5n-kxhycj" role="Client"></participant>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="cn91cgkua8d5ntyb7jy">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="permitList"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit_list"/>
+		<link uin="iywkbgkua8d5n56xgte">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Permit_list" role="Supplier"></participant>
+		</link>
+		<node uin="1krr2gkua8d5n-6glrcs">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation2"/>
+			<property name="messageUid" value="design:link:::cpsjjgkua8d3p-o2km1b:dbdq3gkua8d3p-nqwlsp"/>
+			<link uin="e0xfxgkua8d5njsbofz">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::1krr2gkua8d5n-6glrcs:cn91cgkua8d5ntyb7jy" role="Client"></participant>
+				<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Supplier"></participant>
+			</link>
+		</node>
+		<node uin="hukxqgkua8d5n74lrf2">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation4"/>
+			<property name="messageUid" value="design:link:::7kndkgkua8d3p-7akyco:dbdq3gkua8d3p-nqwlsp"/>
+			<link uin="f2o2mgkua8d5nqqcioi">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::hukxqgkua8d5n74lrf2:cn91cgkua8d5ntyb7jy" role="Client"></participant>
+				<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="gyo20gkua8d5n1e681j">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="creation" value="true"/>
+			<property name="$name" value="Create"/>
+			<property name="predecessorUid" value="design:link:::7kndkgkua8d3p-7akyco:dbdq3gkua8d3p-nqwlsp"/>
+			<property name="activationUid" value="design:node:::eu3ptgkua8d497fa3xi:59jnfgkua8d49csp0s2"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<property name="normalizedIndex" value="0.5"/>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Client"></participant>
+			<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Supplier"></participant>
+		</link>
+		<link uin="j4xengkua8d5nyeh1wf">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Client"></participant>
+			<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Supplier"></participant>
+		</link>
+		<link uin="gu1jkgkua8d5n47uzuc">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Client"></participant>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="do5vzgkua8d4jdr1bhg">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="permitList"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit_list"/>
+		<link uin="bglavgkua8d4j95uhjq">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Permit_list" role="Supplier"></participant>
+		</link>
+		<node uin="iz9vgkua8d4ji08b13">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation6"/>
+			<property name="messageUid" value="design:link:::5erqmgkua8d6rwj8l6:d8bssgkua8d6r-4p3k30"/>
+			<link uin="axtifgkua8d4j3ygnur">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::iz9vgkua8d4ji08b13:do5vzgkua8d4jdr1bhg" role="Client"></participant>
+				<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="6qg4sgkua8d4jgpv8n1">
+			<property name="$description" value="See Timer use cases for details (hyperlinked from background)."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Daily updates"/>
+			<property name="predecessorUid" value="design:link:::5erqmgkua8d6rwj8l6:d8bssgkua8d6r-4p3k30"/>
+			<property name="activationUid" value="design:node:::hecrfgkua8d4jgnm8cu:do5vzgkua8d4jdr1bhg"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<property name="condition" value="Every day"/>
+			<property name="normalizedIndex" value="0.33333334"/>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Client"></participant>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Supplier"></participant>
+		</link>
+		<node uin="hecrfgkua8d4jgnm8cu">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation7"/>
+			<property name="messageUid" value="design:link:::6qg4sgkua8d4jgpv8n1:do5vzgkua8d4jdr1bhg"/>
+		</node>
+		<link uin="aqct1gkua8d4jf9nmak">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Client"></participant>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Supplier"></participant>
+		</link>
+		<link uin="i48d1gkua8d4j-pi46ov">
+			<property name="$description" value="See Timer use cases for details (hyperlinked from background)."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Annual updates"/>
+			<property name="predecessorUid" value="design:link:::5erqmgkua8d6rwj8l6:d8bssgkua8d6r-4p3k30"/>
+			<property name="activationUid" value="design:node:::5pse9gkua8d4j-bpo0mq:do5vzgkua8d4jdr1bhg"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<property name="condition" value="On first day of year"/>
+			<property name="normalizedIndex" value="0.6666667"/>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Client"></participant>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Supplier"></participant>
+		</link>
+		<node uin="5pse9gkua8d4j-bpo0mq">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation8"/>
+			<property name="messageUid" value="design:link:::i48d1gkua8d4j-pi46ov:do5vzgkua8d4jdr1bhg"/>
+		</node>
+		<link uin="39cyhgkua8d4j-l401zf">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::do5vzgkua8d4jdr1bhg" role="Client"></participant>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="64z2zgkua8d49v4ezyy">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="newVehicle"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Vehicle_info"/>
+		<link uin="wjxvgkua8d49-2fjv37">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::64z2zgkua8d49v4ezyy" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Vehicle_info" role="Supplier"></participant>
+		</link>
+		<node uin="faw0vgkua8d49-fseta9">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation7"/>
+			<property name="messageUid" value="design:link:::dyyungkua8d71-4g3wzs:eizwpgkua8d716ey0zc"/>
+			<link uin="jatwtgkua8d49g379pq">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::faw0vgkua8d49-fseta9:64z2zgkua8d49v4ezyy" role="Client"></participant>
+				<participant referencedUin="design:node:::64z2zgkua8d49v4ezyy" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="fs90ugkua8d49ad2qxw">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::64z2zgkua8d49v4ezyy" role="Client"></participant>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="59jnfgkua8d49csp0s2">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="newPermit"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Permit"/>
+		<link uin="bi18ogkua8d49-9giyhr">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Regular_visitor_permit" role="Supplier"></participant>
+		</link>
+		<node uin="eu3ptgkua8d497fa3xi">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation5"/>
+			<property name="messageUid" value="design:link:::gyo20gkua8d5n1e681j:cn91cgkua8d5ntyb7jy"/>
+			<link uin="dksuigkua8d49-n0c7sz">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::eu3ptgkua8d497fa3xi:59jnfgkua8d49csp0s2" role="Client"></participant>
+				<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="2qfgkua8d49-lu5ufw">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Client"></participant>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Supplier"></participant>
+		</link>
+		<node uin="fh5kfgkua8d49-66eoh7">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation1"/>
+			<property name="messageUid" value="design:link:::qxbegkua8d71-njnjyg:eizwpgkua8d716ey0zc"/>
+			<link uin="7jcmjgkua8d49-rr24gj">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::fh5kfgkua8d49-66eoh7:59jnfgkua8d49csp0s2" role="Client"></participant>
+				<participant referencedUin="design:node:::59jnfgkua8d49csp0s2" role="Supplier"></participant>
+			</link>
+		</node>
+	</node>
+	<node uin="83e6lgkua8d3z-8jyj51">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="Electronic clock"/>
+		<property name="@stereotype" value="actor"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::8drjygktya8kn-a0pla1"/>
+		<link uin="e3zfigkua8d3z1pq1kh">
+			<property name="$description" value="Probably a button press in this emulation."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="New day tick"/>
+			<property name="minProcessingDuration" value="255"/>
+			<property name="normalizedIndex" value="0.5"/>
+			<property name="activationUid" value="design:node:::1gwfrgkua8d6r4si0wt:d8bssgkua8d6r-4p3k30"/>
+			<property name="diagram_uniqe_name" value="design:view:::id21qb9ckjnjp4fckjvkso8"/>
+			<participant referencedUin="design:node:::83e6lgkua8d3z-8jyj51" role="Client"></participant>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+		</link>
+		<link uin="5uex7gkua8d3z-s5naix">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::83e6lgkua8d3z-8jyj51" role="Client"></participant>
+			<participant referencedUin="design:node:::d8bssgkua8d6r-4p3k30" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="bxlnrgkua8d3z-pov7sa">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="aScreen"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::id45eo7ckcdb7aqckcf68hn"/>
+		<property name="@stereotype" value="Observer"/>
+		<link uin="arrn0gkua8d3zvellnh">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Campus_security" role="Supplier"></participant>
+		</link>
+		<node uin="i2rczgkua8d3z-p7uu39">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation1"/>
+			<property name="messageUid" value="design:link:::766igkua8d5x-3lbeph:hbakqgkua8d5n-kxhycj"/>
+			<link uin="hkw72gkua8d3z-pn6j3g">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::i2rczgkua8d3z-p7uu39:bxlnrgkua8d3z-pov7sa" role="Client"></participant>
+				<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="7dvxsgkua8d3z-kc5ezf">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Set activated status"/>
+			<property name="normalizedIndex" value="0.5"/>
+			<property name="predecessorUid" value="design:link:::766igkua8d5x-3lbeph:hbakqgkua8d5n-kxhycj"/>
+			<property name="activationUid" value="design:node:::h4dgzgkua8d67ppq1z:dzsadgkua8d67-uwwq6f"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4bwysckk5borjckk61fn8"/>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Client"></participant>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Supplier"></participant>
+		</link>
+		<link uin="cjf3vgkua8d3z-ogyiig">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Client"></participant>
+			<participant referencedUin="design:node:::dzsadgkua8d67-uwwq6f" role="Supplier"></participant>
+		</link>
+		<link uin="88qa1gkua8d3zksjsyk">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::bxlnrgkua8d3z-pov7sa" role="Client"></participant>
+			<participant referencedUin="design:node:::hbakqgkua8d5n-kxhycj" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="1lh49gkua8d3pjgcawx">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="anyBarrier"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Barrier"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Barrier:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Barrier:JFrame"/>
+		<link uin="3dojqgkua8d3p-o01ciw">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Barrier" role="Supplier"></participant>
+		</link>
+		<node uin="co6v8gkua8d3p7svtms">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation1"/>
+			<property name="messageUid" value="design:link:::g8kgsgkua8d71avc3x2:48vtugkua8d71-dho3g6"/>
+			<link uin="i6zz9gkua8d3p-vznpyd">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::co6v8gkua8d3p7svtms:1lh49gkua8d3pjgcawx" role="Client"></participant>
+				<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="j0z74gkua8d3pgdn8i9">
+			<property name="$description" value="Get date from system status - needed for checking entry permit.&#10;&#10;Result returned: the Date."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Fetch today's date"/>
+			<property name="predecessorUid" value="design:link:::g8kgsgkua8d71avc3x2:48vtugkua8d71-dho3g6"/>
+			<property name="activationUid" value="design:node:::2ejzugkua8d67leookw:gm3o2gkua8d67-iuc3cc"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<property name="normalizedIndex" value="0.33333334"/>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Client"></participant>
+			<participant referencedUin="design:node:::gm3o2gkua8d67-iuc3cc" role="Supplier"></participant>
+		</link>
+		<link uin="ajgycgkua8d3p-mmbpny">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Client"></participant>
+			<participant referencedUin="design:node:::gm3o2gkua8d67-iuc3cc" role="Supplier"></participant>
+		</link>
+		<link uin="9onfgkua8d3p69mbte">
+			<property name="$description" value="Ask the vehicle list if this vehicle is allowed through the barrier today. The vehicle list has to find and consult the appropriate permit. If the vehicle is allowed through, then information recorded in the permit is updated if necessary.&#10;&#10;Result returned: true if allowed, false if not."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Allow vehicle through?"/>
+			<property name="minProcessingDuration" value="230"/>
+			<property name="predecessorUid" value="design:link:::g8kgsgkua8d71avc3x2:48vtugkua8d71-dho3g6"/>
+			<property name="activationUid" value="design:node:::6hmw1gkua8d7b-ohqib0:hb9ongkua8d7b-6jddv3"/>
+			<property name="diagram_uniqe_name" value="design:view:::id4pim1ckk5borjckk5cnro"/>
+			<property name="normalizedIndex" value="0.6666667"/>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Client"></participant>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+		</link>
+		<link uin="6iwrigkua8d3z9x13i4">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Client"></participant>
+			<participant referencedUin="design:node:::hb9ongkua8d7b-6jddv3" role="Supplier"></participant>
+		</link>
+		<link uin="e7xmggkua8d3z7irpd0">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::1lh49gkua8d3pjgcawx" role="Client"></participant>
+			<participant referencedUin="design:node:::48vtugkua8d71-dho3g6" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="dbdq3gkua8d3p-nqwlsp">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="anOfficeScreen"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Administration_office"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Administration_office:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Administration_office:JFrame"/>
+		<link uin="h5ksqgkua8d3p-xbwvfr">
+			<property name="$metaclass" value="Dependency Link"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:Administration_office" role="Supplier"></participant>
+		</link>
+		<node uin="8kn02gkua8d3p-sbhedo">
+			<property name="$metaclass" value="Activation"/>
+			<property name="$name" value="Activation1"/>
+			<property name="messageUid" value="design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf"/>
+			<link uin="e7aksgkua8d3praaaja">
+				<property name="$metaclass" value="Return Link"/>
+				<property name="$name" value="Return Link1"/>
+				<property name="normalizedIndex" value="1.0"/>
+				<participant referencedUin="design:node:::8kn02gkua8d3p-sbhedo:dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+				<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Supplier"></participant>
+			</link>
+		</node>
+		<link uin="cpsjjgkua8d3p-o2km1b">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Already a permit holder?"/>
+			<property name="predecessorUid" value="design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf"/>
+			<property name="activationUid" value="design:node:::1krr2gkua8d5n-6glrcs:cn91cgkua8d5ntyb7jy"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<property name="$description" value="Check whether the permit holder for the new permit already has a permit (new permit not allowed if has).&#10;&#10;Result: true if has, false if hasn't."/>
+			<property name="normalizedIndex" value="0.2"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Supplier"></participant>
+		</link>
+		<link uin="6zwwjgkua8d3p-ro2k15">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Supplier"></participant>
+		</link>
+		<link uin="1neoxgkua8d3pp6lrne">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Vehicle already permitted?"/>
+			<property name="iteration" value="For each requested vehicle"/>
+			<property name="predecessorUid" value="design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf"/>
+			<property name="activationUid" value="design:node:::8pb4ogkua8d71-d758ju:eizwpgkua8d716ey0zc"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<property name="$description" value="Check if vehicle already is already associated with a permit (new permit not allowed if it is).&#10;&#10;Result returned: true if it is, false if it isn't."/>
+			<property name="normalizedIndex" value="0.4"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Supplier"></participant>
+		</link>
+		<link uin="6nh2zgkua8d3pdfivfl">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Supplier"></participant>
+		</link>
+		<link uin="7kndkgkua8d3p-7akyco">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Create new Regular_visitor_permit"/>
+			<property name="minProcessingDuration" value="96"/>
+			<property name="predecessorUid" value="design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf"/>
+			<property name="activationUid" value="design:node:::hukxqgkua8d5n74lrf2:cn91cgkua8d5ntyb7jy"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<property name="$description" value="Create new permit in the list (having checked in the previous steps that it will be valid).&#10;&#10;Result returned: reference to the new permit."/>
+			<property name="condition" value="If all OK"/>
+			<property name="normalizedIndex" value="0.6"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::cn91cgkua8d5ntyb7jy" role="Supplier"></participant>
+		</link>
+		<link uin="d3j6bgkua8d3pc3355n">
+			<property name="$metaclass" value="Message Link"/>
+			<property name="iteration" value="For each requested vehicle"/>
+			<property name="minProcessingDuration" value="87"/>
+			<property name="predecessorUid" value="design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf"/>
+			<property name="activationUid" value="design:node:::cpbvqgkua8d71-p5f4db:eizwpgkua8d716ey0zc"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<property name="condition" value="If OK"/>
+			<property name="$name" value="Add vehicle to vehicle list"/>
+			<property name="$description" value="Add vehicle to overall list of permitted vehicles (having checked in previous steps that it will be valid).&#10;&#10;A new Vehicle_info is created to identify the vehicle and is added to the list.&#10;&#10;Must pass the new permit reference to allow the new Vehicle_info to store a link to the permit, and the permit must be informed of the new vehicle (identified by its Vehicle_info).&#10;&#10;Result: void"/>
+			<property name="normalizedIndex" value="0.8"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::eizwpgkua8d716ey0zc" role="Supplier"></participant>
+		</link>
+		<link uin="8tolzgkua8d3p-fwxr8">
+			<property name="$metaclass" value="Messages Link"/>
+			<property name="$name" value="Messages Link"/>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Client"></participant>
+			<participant referencedUin="design:node:::fog6ngkua8d3f-rwvbrf" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="fog6ngkua8d3f-rwvbrf">
+		<property name="$metaclass" value="Object"/>
+		<property name="$name" value="Admin staff"/>
+		<property name="@stereotype" value="actor"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::d8yvlgktya8js5ls11m"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Administration_office"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Administration_office:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Administration_office:JFrame"/>
+		<link uin="h38etgkua8d3f-ps8lzv">
+			<property name="$description" value="Administration staff member enters new permit details into a screen of the Adminstration office, and signals (perhaps by a button click) that a permit is to be issued."/>
+			<property name="$metaclass" value="Message Link"/>
+			<property name="$name" value="Request regular visitor permit issue"/>
+			<property name="minProcessingDuration" value="327"/>
+			<property name="normalizedIndex" value="0.5"/>
+			<property name="activationUid" value="design:node:::8kn02gkua8d3p-sbhedo:dbdq3gkua8d3p-nqwlsp"/>
+			<property name="diagram_uniqe_name" value="design:view:::id2t2fgckjnjp4fckjnq9qi"/>
+			<participant referencedUin="design:node:::fog6ngkua8d3f-rwvbrf" role="Client"></participant>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Supplier"></participant>
+		</link>
+		<link uin="czb0jgkua8d3fn9hvvn">
+			<property name="$metaclass" value="Messages Link"/>
+			<participant referencedUin="design:node:::fog6ngkua8d3f-rwvbrf" role="Client"></participant>
+			<participant referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="ertnxgkua54to-d85y58">
+		<property name="$metaclass" value="Actor"/>
+		<property name="$name" value="You the reader"/>
+		<link uin="8am5bgkua54to-201zvp">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::ertnxgkua54to-d85y58" role="Client"></participant>
+			<participant referencedUin="design:node:::idjoxck6nuccack6pzmau.node" role="Supplier"></participant>
+		</link>
+		<link uin="98hi5gkua54to-fapn6l">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::ertnxgkua54to-d85y58" role="Client"></participant>
+			<participant referencedUin="design:node:::idjoxck6nuccack6pzmau.node1" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="9vjv4gkua54te-tzgq8">
+		<property name="$metaclass" value="Actor"/>
+		<property name="$name" value="Vehicle attempting entry"/>
+		<link uin="qo1xgkua54te-keoavo">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::id22rsickdqoaaxckdqp9pj.node" role="Supplier"></participant>
+		</link>
+		<link uin="4dfykgkua54te7s1x5p">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::id22rsickdqoaaxckdqp9pj.node20" role="Supplier"></participant>
+		</link>
+		<link uin="75x6sgkua54tetsxsqb">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::id22rsickdqoaaxckdqp9pj.node23" role="Supplier"></participant>
+		</link>
+		<link uin="9npprgkua54te-oyppqm">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::id22rsickdqoaaxckdqp9pj.node28" role="Supplier"></participant>
+		</link>
+		<link uin="hkk8rgkua54teb9nskc">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::eefifgkuaa1ev-huf9ga" role="Supplier"></participant>
+		</link>
+		<link uin="c70q6gkua54te6yl2rt">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::bck0ygkuaa1el-kannws" role="Supplier"></participant>
+		</link>
+		<link uin="cvjffgkua54tetjlka8">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::cpf2mgkuaa1ff-mfhlzm" role="Supplier"></participant>
+		</link>
+		<link uin="czs2mgkua54te39shdj">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::9vjv4gkua54te-tzgq8" role="Client"></participant>
+			<participant referencedUin="design:node:::c49kigkuaa1fp1tpzkk" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="u4adgkua54te-r9hl9p">
+		<property name="$metaclass" value="Actor"/>
+		<property name="$name" value="Security staff"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Campus_security"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Campus_security:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Campus_security:JFrame"/>
+		<link uin="haqxlgkua54te-3qvwzu">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::id45eo7ckcdb7aqckcf68hn.node1" role="Supplier"></participant>
+		</link>
+		<link uin="565o8gkua54tet1ybeb">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::id45eo7ckcdb7aqckcf68hn.node3" role="Supplier"></participant>
+		</link>
+		<link uin="7v6jsgkua54tefqtanw">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::id45eo7ckcdb7aqckcf68hn.node5" role="Supplier"></participant>
+		</link>
+		<link uin="fw6x4gkua54te-by3t5i">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::id45eo7ckcdb7aqckcf68hn.node12" role="Supplier"></participant>
+		</link>
+		<link uin="fwt2ogkua54te8hi652">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::iwbcjgkuaa1el-rsvca7" role="Supplier"></participant>
+		</link>
+		<link uin="3k5jpgkua54ted25ji9">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::tgqlgkuaa1ev-8yw95x" role="Supplier"></participant>
+		</link>
+		<link uin="hpb0rgkua54te-8q6o9z">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::i0a2zgkuaa1fpovrfhf" role="Supplier"></participant>
+		</link>
+		<link uin="9egdngkua54te-2r4efp">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::u4adgkua54te-r9hl9p" role="Client"></participant>
+			<participant referencedUin="design:node:::1fgjegkuaa1ff-qfaks5" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="7k6mzgkua54t4-ue6jjy">
+		<property name="$metaclass" value="Actor"/>
+		<property name="$name" value="Electronic clock"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Timer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Timer:JFrame"/>
+		<link uin="frvzcgkua54t44tsbzh">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::7k6mzgkua54t4-ue6jjy" role="Client"></participant>
+			<participant referencedUin="design:node:::id1kckcka7bj24cka8xpq6.node1" role="Supplier"></participant>
+		</link>
+		<link uin="4cx9wgkua54t4ayaket">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::7k6mzgkua54t4-ue6jjy" role="Client"></participant>
+			<participant referencedUin="design:node:::id1kckcka7bj24cka8xpq6.node3" role="Supplier"></participant>
+		</link>
+		<link uin="4kqftgkua54t4-md8ujp">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::7k6mzgkua54t4-ue6jjy" role="Client"></participant>
+			<participant referencedUin="design:node:::id1kckcka7bj24cka8xpq6.node6" role="Supplier"></participant>
+		</link>
+		<link uin="exbu8gkua54t4p1w2zi">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::7k6mzgkua54t4-ue6jjy" role="Client"></participant>
+			<participant referencedUin="design:node:::ih92sgkuaa1fz-ajbb47" role="Supplier"></participant>
+		</link>
+		<link uin="17lt4gkua54t4-2apwep">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::7k6mzgkua54t4-ue6jjy" role="Client"></participant>
+			<participant referencedUin="design:node:::b1afugkuaa1fz-3kb381" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="3id5ngkua54su-jdp9dt">
+		<property name="$metaclass" value="Actor"/>
+		<property name="$name" value="Admin staff"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Administration_office"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_impl:src:Administration_office:Observer"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:l_gnt:src:Administration_office:JFrame"/>
+		<link uin="1qm7hgkua54su-ovi4io">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node1" role="Supplier"></participant>
+		</link>
+		<link uin="6e91hgkua54su-k8mlvw">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node6" role="Supplier"></participant>
+		</link>
+		<link uin="gnsrogkua54su-r2a162">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node16" role="Supplier"></participant>
+		</link>
+		<link uin="j200dgkua54su-vgwm87">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node25" role="Supplier"></participant>
+		</link>
+		<link uin="8hcpbgkua54su-1nyk4">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node20" role="Supplier"></participant>
+		</link>
+		<link uin="ibqcogkua54su8xk5ff">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node28" role="Supplier"></participant>
+		</link>
+		<link uin="azo19gkua54suiv2fkg">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node32" role="Supplier"></participant>
+		</link>
+		<link uin="aeku4gkua54su1emtbp">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node35" role="Supplier"></participant>
+		</link>
+		<link uin="dpz2sgkua54sueysmeh">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::id3pyck6nuccack6nucum.node2" role="Supplier"></participant>
+		</link>
+		<link uin="hsxt4gkua54su-j1d6a3">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::1zkptgkuaa1f5m84x7g" role="Supplier"></participant>
+		</link>
+		<link uin="7f5l4gkua54su6oqm6g">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::jgri5gkuaa1f5-48hzfp" role="Supplier"></participant>
+		</link>
+		<link uin="572qwgkua54sucsqgoo">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::diykfgkuaa1f5ob1r92" role="Supplier"></participant>
+		</link>
+		<link uin="h96m5gkua54su-sjmu7w">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::8v22cgkuaa1f5-bdz00t" role="Supplier"></participant>
+		</link>
+		<link uin="dzb5ggkua54su-d3a00g">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::dzawzgkuaa1fpyjau5v" role="Supplier"></participant>
+		</link>
+		<link uin="12teegkua54sub0pj8d">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::bkkofgkuaa1f5sziik4" role="Supplier"></participant>
+		</link>
+		<link uin="2g7ezgkua54su-qlstl5">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::8i4megkuaa1ev-ei2buz" role="Supplier"></participant>
+		</link>
+		<link uin="6fzgxgkua54suy9ofb">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::8ocvggkuaa1fzln8v3f" role="Supplier"></participant>
+		</link>
+		<link uin="76wgggkua54t4xhfa5r">
+			<property name="$metaclass" value="Association Link"/>
+			<property name="@stereotype" value="communicate"/>
+			<participant referencedUin="design:node:::3id5ngkua54su-jdp9dt" role="Client"></participant>
+			<participant referencedUin="design:node:::3o0h4gkuaa1ff-a8una8" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="48pxjgkua0qbp-mylnyw">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This use diagram shows the functions carried out by an access barrier across a lane of an entrance road to the University."/>
+	</node>
+	<node uin="73xwpgkua0qbp-gyddgw">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This sequence diagram is typical of the handling of the use cases for the Campus security interfaces. [Issuing a warning to a vehicle in breach of Regulations is more like the Administration office functions.]&#10;&#10;A button is pressed on (any of the) Campus security interfaces, and the now activated status is sent to the system status where it is recorded and all observers (principally the barriers) are notified."/>
+	</node>
+	<node uin="3h6frgkua0qbp-gqr14p">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This sequence diagram is typical of handling the various use cases for each Barrier.&#10;&#10;A vehicle's registration number is checked with the permits, and if it is allowed onto the campus today then the barrier is raised. The entry is allowed if the permit allows entry today, and if either this is the first entry today for a vehicle on this permit, or only this vehicle has entered today (and, of course, if the permit has not been suspended).&#10;&#10;Information in the permit is updated as appropriate: noOfEntries, and today's vehicle."/>
+	</node>
+	<node uin="40n2ngkua0qbf-wyxt7k">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This sequence diagram is a typical representative of handling the various use cases for the Administration office.&#10;&#10;A member of the administrative staff has processed an application for a new regular visitor permit, and has agreed to issue it. The required details are entered into the Administration office interface, a Regular_visitor_permit is created in the Permit_list, and Vehicle_info items are created in the Vehicle_list. The permit is only created if: firstly, the named permit holder does not currently have a permit, and, secondly, no vehicle nominated for the new permit is already associated with a permit."/>
+	</node>
+	<node uin="avpthgkua0qbf-3d6wrj">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This is what happens when the timer &quot;ticks&quot; at the start of each new day"/>
+	</node>
+	<node uin="jrohbgkua0qbfyrg5ot">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This diagram gives the use cases for the functions required by central administrative staff of the Estates and Campus Services Office."/>
+	</node>
+	<node uin="7yj06gkua0qbf-k4oycp">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="This describes the PACSUS functions carried out by the University campus security staff, centrally and at the staffed booths at the University entrances. The Campus security staff actually activate and deactivate the barriers, enter warnings for vehicles breaching the parking regulations and monitor the state of the barrier system."/>
+	</node>
+	<node uin="io6eagkua0qb5a987lr">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note3"/>
+		<property name="$note_text" value="These use cases describe what happens in PACSUS when various events are triggered by a hypothetical clock.  &#10; &#10;See also very important information about date handling in the Date class description (right click the background of this diagram and follow hyperlink)."/>
+	</node>
+	<node uin="99gtlgkua0qb5-jq44cg">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="Please read the information in the Introduction to PACSUS use case diagram (right-mouse click the background of this diagram and follow hyperlink)."/>
+	</node>
+	<node uin="h0hj9gkua0qb5-6ewvgj">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="PACSUS is the Parking Access Control System for the University of Stirling.  &#10;&#10;At certain times, principally the whole working day during semester, vehicle access to the campus is controlled by barriers. Registered vehicles are allowed entry. Special arrangements exist for visitors to the campus, in various categories.  Outside the working day, outside semester, and at any other special time, the barrier system is not in operation.&#10;&#10;PACSUS manages central records of registered vehicles and owners, visitors and so on, records warnings and suspensions, controls the actual operation of the barriers, and collects statistics on the number of entries made onto the campus by each permit.  &#10;&#10;PACSUS does NOT make decisions on applications for permits, nor decisions on issuing warnings or suspending permits, and does not deal with the financial aspects of payment for permits, nor the payment of rebates. It DOES, however, collect and record information for these purposes. It does not have anything to do with the admission of vehicles to the campus through the special staffed booth(s) that do not have barriers.  &#10;&#10;The version of the University regulations governing the parking access controls on which this project is based can be seen on-line via at URL:  &#10; http://www.cs.stir.ac.uk/courses/CSC9P6/assignments/GroupProject/ParkingRegulations.pdf &#10;(you can right-mouse click on the background of this diagram, and select Hyperlink to... to go directly there)."/>
+	</node>
+	<node uin="bqol1gkua0qb5-36t44v">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="In this emulation of a real &#10;PACSUS this is just the &#10;system developer clicking a&#10;button &quot;once a day&quot;."/>
+	</node>
+	<node uin="hn1aigkua0qavxc54fn">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note2"/>
+		<property name="$note_text" value="About reading this design document: &#10;&#10;Most of the 'items' in the design (diagram panes, components of diagrams, associations, classes, methods, attributes, etc) have essential descriptive documentation attached. This is displayed in the Description part of the Properties pane: select the item, then click the Description item, and then the ... button to the right. In particular most Diagrams have a Description entry - click on the diagram's background and read the description in the Properties pane.&#10;&#10;Further, many of the items in the document (including diagram backgrounds) are hyperlinked to one or more related items - they appear in blue; for example classes are hyperlinked to use cases relevant to them, use cases are hyperlinked to sequence diagrams, and vice versa. To follow a link, right-mouse click the item in the Model Navigator or Diagram panes and choose Hyperlink to... from the pop-up menu."/>
+	</node>
+</nodeSet>

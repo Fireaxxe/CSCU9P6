@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="fx37lgktya8k8hlywa1">
+		<property name="$description" value="This use diagram shows the functions carried out by an access barrier across a lane of an entrance road to the University."/>
+		<property name="$metaclass" value="Use Case Diagram"/>
+		<property name="__options" value="option.links = Direct"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Barrier"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Barrier"/>
+		<property name="@url" value="element://model:project::PACSUS/design:node:::bck0ygkuaa1el-kannws"/>
+		<property name="@url" value="element://model:project::PACSUS/design:node:::c49kigkuaa1fp1tpzkk"/>
+		<property name="@url" value="element://model:project::PACSUS/design:node:::48vtugkua8d71-dho3g6"/>
+		<reference referencedUin="design:node:::48pxjgkua0qbp-mylnyw">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="55,88,198,120"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::9vjv4gkua54te-tzgq8">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="35,275,150,76"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="design:link:::hkk8rgkua54teb9nskc:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="175,280"/>
+				<property name="targetAnchor" value="423,124"/>
+			</reference>
+			<reference referencedUin="design:link:::cvjffgkua54tetjlka8:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="190,347"/>
+				<property name="targetAnchor" value="369,347"/>
+			</reference>
+			<reference referencedUin="design:link:::75x6sgkua54tetsxsqb:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="94,271"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="327,497"/>
+			</reference>
+			<reference referencedUin="design:link:::9npprgkua54te-oyppqm:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="150,271"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="328,363"/>
+			</reference>
+			<reference referencedUin="design:link:::4dfykgkua54te7s1x5p:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="188,233"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="329,233"/>
+			</reference>
+			<reference referencedUin="design:link:::qo1xgkua54te-keoavo:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="113,195"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="325,98"/>
+			</reference>
+			<reference referencedUin="design:link:::c70q6gkua54te6yl2rt:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="190,300"/>
+				<property name="targetAnchor" value="379,257"/>
+			</reference>
+			<reference referencedUin="design:link:::czs2mgkua54te39shdj:9vjv4gkua54te-tzgq8">
+				<property name="sourceAnchor" value="190,353"/>
+				<property name="targetAnchor" value="414,460"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::bck0ygkuaa1el-kannws">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="329,207,265,52"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::eefifgkuaa1ev-huf9ga">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="325,72,267,49"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::cpf2mgkuaa1ff-mfhlzm">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="328,333,284,59"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::c49kigkuaa1fp1tpzkk">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="327,453,287,63"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>
