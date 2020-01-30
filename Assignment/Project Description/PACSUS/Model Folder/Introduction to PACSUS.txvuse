@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="ctuu3eyww5z36-mz6nsf">
+		<property name="$metaclass" value="Use Case Diagram"/>
+		<property name="__options" value=""/>
+		<property name="$description" value="PACSUS is the Parking Access Control System for the University of Stirling.  &#10;&#10;At certain times, principally the whole working day during semester, vehicle access to the campus is controlled by barriers. Registered vehicles are allowed entry. Special arrangements exist for visitors to the campus, in various categories.  Outside the working day, outside semester, and at any otyer special time, the barrier system is not in operation.&#10;&#10;PACSUS manages central records of registered vehicles and owners, visitors and so on, records warnings and suspensions, controls the actual operation of the barriers, and collects statistics on the number of entries made onto the campus by each permit.  &#10;&#10;PACSUS does NOT make decisions on applications for permits, nor decisions on issuing warnings or suspending permits, and does not deal with the financial aspects of payment for permits, nor the payment of rebates. It DOES, however, collect and record information for these purposes. It does not have anything to do with the admission of vehicles to the campus through the special staffed booth(s) that do not have barriers.  &#10;&#10;The current University regulations governing the parking access controls can be seen on-line via the Portal at URL:  &#10;http://www.facilities.stir.ac.uk/documents/traffic-regulations.pdf  &#10;or an earlier version at URL:  &#10;http://www.cs.stir.ac.uk/courses/CSC9P6/assignments/GroupProject/ParkingRegulations.pdf &#10;(you can right-mouse click on the background of this diagram, and select Hyperlink to... to go directly there)."/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::id8dwck6nuccack6ny0fu"/>
+		<property name="@url" value="http://www.cs.stir.ac.uk/courses/CSC9P6/assignments/GroupProject/ParkingRegulations.pdf"/>
+		<reference referencedUin="design:node:::hn1aigkua0qavxc54fn">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="150,20,580,250"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::h0hj9gkua0qb5-6ewvgj">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="150,310,580,466"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::ertnxgkua54to-d85y58">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="40,290,58,86"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+			<reference referencedUin="design:link:::8am5bgkua54to-201zvp:ertnxgkua54to-d85y58">
+				<property name="sourceAnchor" value="103,343"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="155,343"/>
+			</reference>
+			<reference referencedUin="design:link:::98hi5gkua54to-fapn6l:ertnxgkua54to-d85y58">
+				<property name="sourceAnchor" value="103,318"/>
+				<property name="targetAnchor" value="191,275"/>
+				<property name="bounds_setted_by_user" value="true"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

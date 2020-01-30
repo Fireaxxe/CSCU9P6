@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="8drjygktya8kn-a0pla1">
+		<property name="$metaclass" value="Use Case Diagram"/>
+		<property name="__options" value="option.links = Direct"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Date"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Date"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Timer"/>
+		<property name="@url" value="element://model:project::PACSUS/design:view:::h0du1gkty8w6u-olgy9f"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Timer"/>
+		<property name="@url" value="element://model:project::PACSUS/design:node:::83e6lgkua8d3z-8jyj51"/>
+		<property name="$description" value="These use cases describe what happens in PACSUS when various events are triggered by a hypothetical clock. &#10;&#10;See also very important information about date handling in the Date class description (right click background and follow hyperlink)."/>
+		<reference referencedUin="design:node:::bqol1gkua0qb5-36t44v">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="24,348,183,101"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::io6eagkua0qb5a987lr">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="275,329,370,120"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::7k6mzgkua54t4-ue6jjy">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="64,151,84,87"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="design:link:::4cx9wgkua54t4ayaket:7k6mzgkua54t4-ue6jjy">
+				<property name="sourceAnchor" value="153,165"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="342,164"/>
+			</reference>
+			<reference referencedUin="design:link:::exbu8gkua54t4p1w2zi:7k6mzgkua54t4-ue6jjy">
+				<property name="sourceAnchor" value="153,162"/>
+				<property name="targetAnchor" value="351,160"/>
+			</reference>
+			<reference referencedUin="design:link:::4kqftgkua54t4-md8ujp:7k6mzgkua54t4-ue6jjy">
+				<property name="sourceAnchor" value="153,241"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="398,241"/>
+			</reference>
+			<reference referencedUin="design:link:::17lt4gkua54t4-2apwep:7k6mzgkua54t4-ue6jjy">
+				<property name="sourceAnchor" value="153,241"/>
+				<property name="targetAnchor" value="398,241"/>
+			</reference>
+			<reference referencedUin="design:link:::frvzcgkua54t44tsbzh:7k6mzgkua54t4-ue6jjy">
+				<property name="sourceAnchor" value="111,243"/>
+				<property name="bendpoints" value=""/>
+				<property name="targetAnchor" value="111,353"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::ih92sgkuaa1fz-ajbb47">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="314,115,291,49"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::b1afugkuaa1fz-3kb381">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="314,234,291,49"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

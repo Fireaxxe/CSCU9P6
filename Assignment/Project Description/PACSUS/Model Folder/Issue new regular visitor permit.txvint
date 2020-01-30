@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="gyozhgkty8w6ujdkjwo">
+		<property name="$metaclass" value="Sequence Diagram"/>
+		<property name="__options" value="option.orientation = Landscape&#10;option.fittopage = false&#10;option.printzoom = 0.5"/>
+		<property name="@url" value="element://model:project::PACSUS/design:node:::jgri5gkuaa1f5-48hzfp"/>
+		<property name="@url" value="element://model:project::PACSUS/jdt:e_class:src:Administration_office"/>
+		<property name="reversedUrl" value="element://model:project::PACSUS/jdt:e_class:src:Administration_office"/>
+		<property name="$description" value="This sequence diagram is a typical representative of handling the various use cases for the Administration office.&#10;&#10;A member of the administrative staff has processed an application for a new regular visitor permit, and has agreed to issue it. The required details are entered into the Administration office interface, a Regular_visitor_permit is created in the Permit_list, and Vehicle_info items are created in the Vehicle_list. The permit is only created if: firstly, the named permit holder does not currently have a permit, and, secondly, no vehicle nominated for the new permit is already associated with a permit."/>
+		<reference referencedUin="design:node:::40n2ngkua0qbf-wyxt7k">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="125,655,456,216"/>
+			<property name="seq_bounds_setted_by_user" value="true"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:node:::fog6ngkua8d3f-rwvbrf">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="125,25,72,671"/>
+			<reference referencedUin="design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf">
+				<property name="seq_sourceAnchor" value="173,108"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="385,108"/>
+				<property name="sendingInstant" value="108"/>
+				<property name="processingDuration" value="513"/>
+				<property name="minProcessingDuration" value="513"/>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node2.link:id2t2fgckjnjp4fckjnq9qi.node2">
+					<property name="seq_bounds" value="87,129,217,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:$messageText:design:link:::h38etgkua8d3f-ps8lzv:fog6ngkua8d3f-rwvbrf">
+					<property name="seq_bounds" value="3,0,205,14"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::czb0jgkua8d3fn9hvvn:fog6ngkua8d3f-rwvbrf">
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::dbdq3gkua8d3p-nqwlsp">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="282,25,211,671"/>
+			<reference referencedUin="design:link:::6nh2zgkua8d3pdfivfl:dbdq3gkua8d3p-nqwlsp">
+			</reference>
+			<reference referencedUin="design:node:::8kn02gkua8d3p-sbhedo:dbdq3gkua8d3p-nqwlsp">
+				<property name="seq_bounds" value="98,50,14,513"/>
+				<reference referencedUin="design:link:::e7aksgkua8d3praaaja:8kn02gkua8d3p-sbhedo:dbdq3gkua8d3p-nqwlsp">
+					<property name="seq_sourceAnchor" value="17,573"/>
+					<property name="seq_targetAnchor" value="100,573"/>
+					<property name="sendingInstant" value="573"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::d3j6bgkua8d3pc3355n:dbdq3gkua8d3p-nqwlsp">
+				<property name="seq_sourceAnchor" value="399,387"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="1033,387"/>
+				<property name="sendingInstant" value="387"/>
+				<property name="processingDuration" value="181"/>
+				<property name="minProcessingDuration" value="181"/>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node4.link25:id2t2fgckjnjp4fckjnq9qi.node4">
+					<property name="seq_bounds" value="324,407,377,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+				<reference referencedUin="label:$messageText:design:link:::d3j6bgkua8d3pc3355n:dbdq3gkua8d3p-nqwlsp">
+					<property name="seq_bounds" value="3,0,250,28"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::6zwwjgkua8d3p-ro2k15:dbdq3gkua8d3p-nqwlsp">
+			</reference>
+			<reference referencedUin="design:link:::7kndkgkua8d3p-7akyco:dbdq3gkua8d3p-nqwlsp">
+				<property name="seq_sourceAnchor" value="399,240"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="655,240"/>
+				<property name="sendingInstant" value="240"/>
+				<property name="processingDuration" value="106"/>
+				<property name="minProcessingDuration" value="87"/>
+				<reference referencedUin="label:$messageText:design:link:::7kndkgkua8d3p-7akyco:dbdq3gkua8d3p-nqwlsp">
+					<property name="seq_bounds" value="3,0,250,28"/>
+				</reference>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node4.link19:id2t2fgckjnjp4fckjnq9qi.node4">
+					<property name="seq_bounds" value="324,276,260,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::1neoxgkua8d3pp6lrne:dbdq3gkua8d3p-nqwlsp">
+				<property name="seq_sourceAnchor" value="399,180"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="1033,180"/>
+				<property name="sendingInstant" value="180"/>
+				<property name="processingDuration" value="23"/>
+				<property name="minProcessingDuration" value="23"/>
+				<reference referencedUin="label:$messageText:design:link:::1neoxgkua8d3pp6lrne:dbdq3gkua8d3p-nqwlsp">
+					<property name="seq_bounds" value="3,0,250,28"/>
+				</reference>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node4.link17:id2t2fgckjnjp4fckjnq9qi.node4">
+					<property name="seq_bounds" value="324,214,341,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::cpsjjgkua8d3p-o2km1b:dbdq3gkua8d3p-nqwlsp">
+				<property name="seq_sourceAnchor" value="399,113"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="655,113"/>
+				<property name="sendingInstant" value="113"/>
+				<property name="processingDuration" value="20"/>
+				<reference referencedUin="label:$messageText:design:link:::cpsjjgkua8d3p-o2km1b:dbdq3gkua8d3p-nqwlsp">
+					<property name="seq_bounds" value="3,0,159,14"/>
+				</reference>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node4.link15:id2t2fgckjnjp4fckjnq9qi.node4">
+					<property name="seq_bounds" value="324,151,164,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::59jnfgkua8d49csp0s2">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="755,246,193,450"/>
+			<property name="seq_location_set_by_user" value="true"/>
+			<reference referencedUin="design:node:::fh5kfgkua8d49-66eoh7:59jnfgkua8d49csp0s2">
+				<property name="seq_bounds" value="89,221,14,20"/>
+				<property name="location_set_by_user" value="true"/>
+				<reference referencedUin="design:link:::7jcmjgkua8d49-rr24gj:fh5kfgkua8d49-66eoh7:59jnfgkua8d49csp0s2">
+					<property name="seq_sourceAnchor" value="17,505"/>
+					<property name="seq_targetAnchor" value="100,505"/>
+					<property name="sendingInstant" value="505"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:node:::eu3ptgkua8d497fa3xi:59jnfgkua8d49csp0s2">
+				<property name="seq_bounds" value="89,7,14,50"/>
+				<reference referencedUin="design:link:::dksuigkua8d49-n0c7sz:eu3ptgkua8d497fa3xi:59jnfgkua8d49csp0s2">
+					<property name="seq_sourceAnchor" value="17,291"/>
+					<property name="seq_targetAnchor" value="100,291"/>
+					<property name="sendingInstant" value="291"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::64z2zgkua8d49v4ezyy">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="1126,377,143,319"/>
+			<reference referencedUin="design:node:::faw0vgkua8d49-fseta9:64z2zgkua8d49v4ezyy">
+				<property name="seq_bounds" value="64,7,14,50"/>
+				<reference referencedUin="design:link:::jatwtgkua8d49g379pq:faw0vgkua8d49-fseta9:64z2zgkua8d49v4ezyy">
+					<property name="seq_sourceAnchor" value="17,422"/>
+					<property name="seq_targetAnchor" value="100,422"/>
+					<property name="sendingInstant" value="422"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::cn91cgkua8d5ntyb7jy">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="596,25,123,671"/>
+			<reference referencedUin="design:link:::gyo20gkua8d5n1e681j:cn91cgkua8d5ntyb7jy">
+				<property name="seq_sourceAnchor" value="669,286"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="760,286"/>
+				<property name="sendingInstant" value="286"/>
+				<property name="processingDuration" value="50"/>
+				<property name="minProcessingDuration" value="41"/>
+				<reference referencedUin="label:$messageText:design:link:::gyo20gkua8d5n1e681j:cn91cgkua8d5ntyb7jy">
+					<property name="seq_bounds" value="3,0,73,14"/>
+				</reference>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node9.link23:id2t2fgckjnjp4fckjnq9qi.node9">
+					<property name="seq_bounds" value="504,305,78,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:node:::1krr2gkua8d5n-6glrcs:cn91cgkua8d5ntyb7jy">
+				<property name="seq_bounds" value="54,55,14,20"/>
+				<reference referencedUin="design:link:::e0xfxgkua8d5njsbofz:1krr2gkua8d5n-6glrcs:cn91cgkua8d5ntyb7jy">
+					<property name="seq_sourceAnchor" value="17,118"/>
+					<property name="seq_targetAnchor" value="100,118"/>
+					<property name="sendingInstant" value="118"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::j4xengkua8d5nyeh1wf:cn91cgkua8d5ntyb7jy">
+			</reference>
+			<reference referencedUin="design:node:::hukxqgkua8d5n74lrf2:cn91cgkua8d5ntyb7jy">
+				<property name="seq_bounds" value="54,182,14,106"/>
+				<reference referencedUin="design:link:::f2o2mgkua8d5nqqcioi:hukxqgkua8d5n74lrf2:cn91cgkua8d5ntyb7jy">
+					<property name="seq_sourceAnchor" value="17,300"/>
+					<property name="seq_targetAnchor" value="100,300"/>
+					<property name="sendingInstant" value="300"/>
+				</reference>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::eizwpgkua8d716ey0zc">
+			<property name="$shortcutReference" value="true"/>
+			<property name="seq_bounds" value="971,25,129,671"/>
+			<reference referencedUin="design:link:::qxbegkua8d71-njnjyg:eizwpgkua8d716ey0zc">
+				<property name="sendingInstant" value="500"/>
+				<property name="processingDuration" value="20"/>
+				<property name="seq_sourceAnchor" value="1033,500"/>
+				<property name="seq_targetAnchor" value="863,500"/>
+				<reference referencedUin="label:$messageText:design:link:::qxbegkua8d71-njnjyg:eizwpgkua8d716ey0zc">
+					<property name="seq_bounds" value="3,0,183,14"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:link:::1dr6kgkua8d71uny443:eizwpgkua8d716ey0zc">
+			</reference>
+			<reference referencedUin="design:link:::dyyungkua8d71-4g3wzs:eizwpgkua8d716ey0zc">
+				<property name="seq_sourceAnchor" value="1047,417"/>
+				<property name="seq_bendpoints" value=""/>
+				<property name="seq_targetAnchor" value="1131,417"/>
+				<property name="sendingInstant" value="417"/>
+				<property name="processingDuration" value="50"/>
+				<reference referencedUin="label:$messageText:design:link:::dyyungkua8d71-4g3wzs:eizwpgkua8d716ey0zc">
+					<property name="seq_bounds" value="3,0,73,14"/>
+				</reference>
+				<reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id2t2fgckjnjp4fckjnq9qi.node11.link29:id2t2fgckjnjp4fckjnq9qi.node11">
+					<property name="seq_bounds" value="982,428,78,16"/>
+					<property name="seq_bounds_setted_by_user" value="true"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:node:::8pb4ogkua8d71-d758ju:eizwpgkua8d716ey0zc">
+				<property name="seq_bounds" value="57,122,14,23"/>
+				<reference referencedUin="design:link:::h0a3igkua8d71-v7id66:8pb4ogkua8d71-d758ju:eizwpgkua8d716ey0zc">
+					<property name="seq_sourceAnchor" value="17,185"/>
+					<property name="seq_targetAnchor" value="100,185"/>
+					<property name="sendingInstant" value="185"/>
+				</reference>
+			</reference>
+			<reference referencedUin="design:node:::cpbvqgkua8d71-p5f4db:eizwpgkua8d716ey0zc">
+				<property name="seq_bounds" value="57,329,14,181"/>
+				<reference referencedUin="design:link:::aoi8vgkua8d71lohhnw:cpbvqgkua8d71-p5f4db:eizwpgkua8d716ey0zc">
+					<property name="seq_sourceAnchor" value="17,472"/>
+					<property name="seq_targetAnchor" value="100,472"/>
+					<property name="sendingInstant" value="472"/>
+				</reference>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>
